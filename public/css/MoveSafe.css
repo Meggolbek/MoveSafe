@@ -11,6 +11,16 @@
     border:1px solid black;
 }
 
+.search-button{
+    height: 10vh;
+    width: 30vw;
+}
+
 .centered{
     text-align: center;
+}
+.places-button{
+    height: 10vh;
+    width: 30vw;
+    margin: 5px 4px;
 }
