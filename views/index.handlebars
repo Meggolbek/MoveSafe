@@ -20,16 +20,16 @@
         <p>Looking for these places?</p>
         <div class="centered">
             {{#each row1}}
-                <button id="{{id}}" class="places-button">
-                    <a href="safePlace/{{place}}">{{place}}</a>
-                </button>
+                <a href="safePlace/{{place}}"><button id="{{id}}" class="places-button">
+                    {{place}}
+                </button></a>
             {{/each}}
         </div>
         <div class="centered">
             {{#each row2}}
-                <button id="{{id}}" class="places-button">
-                    <a href="safePlace/{{place}}">{{place}}</a>
-                </button>
+                <a href="safePlace/{{place}}"><button id="{{id}}" class="places-button">
+                    {{place}}
+                </button></a>
             {{/each}}
         </div>
     </div>
