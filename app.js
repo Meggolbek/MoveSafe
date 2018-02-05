@@ -5,9 +5,11 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var handlebars = require('express3-handlebars')
+var handlebars = require('express3-handlebars');
 
 var index = require('./routes/index');
+var safePlaces = require('./routes/SafePlaces');
+var safePath = require('./routes/SafePath');
 // Example route
 // var user = require('./routes/user');
 
@@ -35,6 +37,9 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
+app.get('/safePlace', safePlaces.view);
+app.get('/safePlace/:place', safePlaces.view);
+app.get('/safePath', safePath.view);
 
 // Example route
 // app.get('/users', user.list);

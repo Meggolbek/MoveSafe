@@ -1,6 +1,10 @@
 .header{
     text-align: center;
+<<<<<<< HEAD
     font-size: 5vw;
+=======
+    font-size: 5vh;
+>>>>>>> e50898042ccbb2d52d04137ff86b7bf102710c6b
     position: relative;
     top: 0;
     font-family: "Century Gothic";
