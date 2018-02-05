@@ -1,11 +1,16 @@
 .header{
     text-align: center;
-    font-size: 16px;
     font-size: 8vw;
+    position: relative;
+    top: 0;
 }
 
 .header:after{
     content:' ';
     display:block;
     border:1px solid black;
+}
+
+.centered{
+    text-align: center;
 }
