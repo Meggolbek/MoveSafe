@@ -15,6 +15,32 @@
     <div>
         <h1 class="header">Find A Safe {{place}}</h1>
     </div>
+
+
+
+<!--place holder--> 
+  <form>
+    <div class="form-group centered">       
+      <label style="display:inline-block" class="control-label col-sm-2" >Start:</label> 
+      <input required id="origin-input" class="controls" style="display: inline-block; padding: 6px 10px;border-radius: 0;border: 1px solid lightgrey; width: 500px;"  type="text" name="start" placeholder="{{start}}">
+      <input type="reset" value="x">
+    </div>
+
+    <div class="form-group centered">       
+      <label style="display:inline-block" class="control-label col-sm-2" >Destination:</label> 
+      <input required id="origin-input" class="controls" style="display: inline-block; padding: 6px 10px;border-radius: 0;border: 1px solid lightgrey;width: 500px;"  type="text" name="destination" placeholder="{{place}}">
+      <input type="reset" value="x">
+    </div>
+    <br>
+
+    <div class="form-group centered"> 
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit">Search</button>
+      </div>
+    </div>
+  </form>
+
+
 <script src="https://code.jquery.com/jquery.js"></script>
 </body>
 </html>

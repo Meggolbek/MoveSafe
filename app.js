@@ -10,6 +10,9 @@ var handlebars = require('express3-handlebars');
 var index = require('./routes/index');
 var safePlaces = require('./routes/SafePlaces');
 var safePath = require('./routes/SafePath');
+
+var start = require('./routes/SafePath');
+var destination = require('./routes/SafePath');
 // Example route
 // var user = require('./routes/user');
 
@@ -39,7 +42,7 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/safePlace', safePlaces.view);
 app.get('/safePlace/:place', safePlaces.view);
-app.get('/safePath', safePath.view);
+app.get('/safePath/:start/:destination', safePath.view);
 
 // Example route
 // app.get('/users', user.list);
