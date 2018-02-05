@@ -1,3 +1,7 @@
-/**
- * Created by meggo on 2/5/2018.
+/*
+ * GET home page.
  */
+
+exports.view = function(req, res){
+    res.render('index');
+};
