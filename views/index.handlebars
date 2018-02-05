@@ -19,12 +19,18 @@
         </div>
         <p>Looking for these places?</p>
         <div class="centered">
-            <button id="index-atm-button" class="places-button">ATM</button>
-            <button id="index-gas-button" class="places-button">Gas Station</button>
+            {{#each row1}}
+                <button id="{{id}}" class="places-button">
+                    <a href="safePlace/{{place}}">{{place}}</a>
+                </button>
+            {{/each}}
         </div>
         <div class="centered">
-            <button id="index-bars-button" class="places-button">Bars</button>
-            <button id="index-Restaurant-button" class="places-button">Restaurant</button>
+            {{#each row2}}
+                <button id="{{id}}" class="places-button">
+                    <a href="safePlace/{{place}}">{{place}}</a>
+                </button>
+            {{/each}}
         </div>
     </div>
 <!-- <script src="https://code.jquery.com/jquery.js"></script> -->
