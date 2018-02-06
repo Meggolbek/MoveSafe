@@ -71,6 +71,20 @@ font-family:Century Gothic; padding: 6px 10px;border-radius: 0;border: 1px solid
     color: black;
 }
 
+
+#navigationBar-active {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family:Century Gothic;
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
 body {margin:0;}
 
 /* Always set the map height explicitly to define the size of the div element that contains the map. */
