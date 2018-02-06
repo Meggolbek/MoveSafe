@@ -5,3 +5,8 @@ exports.view = function(req, res){
 
     });
 };
+
+
+function goBack() {
+    window.history.back()
+}
