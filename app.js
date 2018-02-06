@@ -48,7 +48,17 @@ app.get('/arrival', arrival.view);
 app.post('/safePath', function(req, res){
     var start = req.body.start;
     var dest = req.body.destination;
-    res.redirect('/safePath/'+start+'/'+dest);
+    if (start != '' && dest != '') {
+        res.redirect('/safePath/' + start + '/' + dest);
+    } else if (start != ''){
+        res.redirect('/safePath/' + start + '/' + start);
+    } else if ( dest != '') {
+        res.redirect('/safePath/' + dest + '/' + dest);
+    }
+    else{
+        res.redirect('/');
+    }
+
 })
 // Example route
 // app.get('/users', user.list);
