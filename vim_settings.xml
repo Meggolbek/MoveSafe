@@ -3,6 +3,9 @@
     <state version="4" enabled="true" />
     <globalmarks />
     <filemarks>
+      <file name="/Dummy.txt" timestamp="1517904042072">
+        <mark key="[" line="0" column="0" />
+      </file>
       <file name="$USER_HOME$/MoveSafe/routes/SafePath.js" timestamp="1517896764315">
         <mark key="[" line="0" column="4" />
         <mark key="]" line="0" column="4" />
