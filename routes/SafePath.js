@@ -1,7 +1,11 @@
 exports.view = function(req, res){
     res.render('safePath', {
-        'start': '',
-        'destination' : '',
-        'image': 'PlaceHolderSafePath.png'
+        'start': '10060 North Torrey Pines Road',
+        'destination' : 'Mandeville Auditorium'
     });
 };
+
+
+function goBack() {
+    window.history.back()
+}
