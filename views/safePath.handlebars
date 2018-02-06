@@ -26,17 +26,17 @@
 <!--place holder--> 
   <form method = "post">
     <div class="form-group centered">
-      <input required id="origin-input" class="controls"  type="text" name="start" value="{{start}}">
-      <input id="reset-button" type="reset" value="x">
+      <input required id="origin-input" class="controls"  type="text" name="start">
+      <button  id="reset-button-start" onclick="clearTextStart()">x</button>
     </div>
     <div class="form-group centered">
-      <input required id="origin-input" class="controls"  type="text" name="destination" value="{{destination}}">
-      <input  id="reset-button" type="reset" value="x">
+      <input required id="destination-input" class="controls"  type="text" name="destination">
+      <button  id="reset-button-dest" onclick="clearTextDest()">x</button>
     </div>
     <br>
     <div class="form-group centered"> 
       <div class="col-sm-offset-2 col-sm-10">
-        <button id="reset-button" type="submit">Search</button>
+        <button id="reset-button-dest" type="submit">Search</button>
       </div>
     </div>
   </form>
@@ -47,6 +47,15 @@
     <img style= "width: 90vw; height: 60vh;"src= "/images/PlaceHolderSafePath.png" alt="Image not responding">
     
 <script src="https://code.jquery.com/jquery.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function(event) { 
+        document.getElementById("origin-input").value = "{{start}}";
+        document.getElementById("destination-input").value = "{{destination}}";
+    });
+
+
+
+</script>
    <!-- <script>
       // This example requires the Places library. Include the libraries=places
       // parameter when you first load the API. For example:
