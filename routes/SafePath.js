@@ -1,7 +1,7 @@
 exports.view = function(req, res){
     res.render('safePath', {
-        'start': '',
-        'destination' : ''
+        'start': '10060 North Torrey Pines Road',
+        'destination' : 'Mandeville Auditorium'
 
     });
 };
