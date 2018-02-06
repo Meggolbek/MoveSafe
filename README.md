@@ -36,5 +36,8 @@ click the pull requests tab
 then select new pull request
 if you wish to merge to master the first button should say master on the top left.
 The second button is the branch you wish to merge onto master
-
-
+Then you can look at the changes in the files and hit Create pull request
+you can type any comments you want in the leave a comment box and it will show up on the pull request
+on the right, you can add a reviewer to look over the code before merging
+If you do not want a reviewer, you can just hit create pull request
+Finally, you hit merge pull request and it will be done!
