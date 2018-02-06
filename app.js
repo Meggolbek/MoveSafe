@@ -45,6 +45,11 @@ app.get('/safePath/:start/:destination', safePath.view);
 app.get('/routing', routing.view);
 app.get('/arrival', arrival.view);
 
+app.post('/safePath', function(req, res){
+    var start = req.body.start;
+    var dest = req.body.destination;
+    res.redirect('/safePath/'+start+'/'+dest);
+})
 // Example route
 // app.get('/users', user.list);
 
