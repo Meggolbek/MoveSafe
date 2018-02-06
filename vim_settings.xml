@@ -11,6 +11,9 @@
         <mark key="]" line="0" column="4" />
         <mark key="." line="0" column="4" />
       </file>
+      <file name="$USER_HOME$/MoveSafe/views/index.handlebars" timestamp="1517945864542">
+        <mark key="[" line="10" column="0" />
+      </file>
       <file name="$USER_HOME$/MoveSafe/views/safePath.handlebars" timestamp="1517897710067">
         <mark key="[" line="14" column="0" />
         <mark key="]" line="14" column="0" />
@@ -31,7 +34,12 @@
       <last-dir>0</last-dir>
       <show-last>false</show-last>
     </search>
-    <history />
+    <history>
+      <history-search />
+      <history-cmd />
+      <history-expr />
+      <history-input />
+    </history>
     <shortcut-conflicts>
       <shortcut-conflict owner="vim">
         <text>ctrl pressed C</text>
