@@ -1,3 +1,3 @@
-/**
- * Created by meggo on 2/5/2018.
- */
+exports.view = function(req, res){
+    res.render('arrival')
+};
