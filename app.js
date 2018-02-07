@@ -11,7 +11,6 @@ var path = require('path');
 var handlebars = require('express3-handlebars');
 
 var index = require('./routes/index');
-var safePlaces = require('./routes/SafePlaces');
 var safePath = require('./routes/SafePath');
 var routing = require('./routes/Routing');
 var arrival = require('./routes/Arrival');
