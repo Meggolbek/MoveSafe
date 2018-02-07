@@ -21,7 +21,12 @@
     background-color: #e5e5e5;
 }
 
-#reset-button{
+#reset-button-start{
+font-family:Century Gothic; padding: 6px 10px;border-radius: 0;border: 1px solid lightgrey;
+}
+
+
+#reset-button-dest{
 font-family:Century Gothic; padding: 6px 10px;border-radius: 0;border: 1px solid lightgrey;
 }
 

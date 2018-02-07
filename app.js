@@ -3,6 +3,9 @@
  */
 
 var express = require('express');
+    //require the body-parser nodejs module
+var bodyParser = require('body-parser');
+
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
@@ -31,17 +34,23 @@ app.use(express.cookieParser('IxD secret key'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+//support parsing of application/json type post data
+app.use(bodyParser.json());
+//support parsing of application/x-www-form-urlencoded post data
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // development only
 if ('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
 
+
+
+
 // Add routes here
 app.get('/', index.view);
-app.get('/safePlace', safePlaces.view);
-app.get('/safePlace/:place', safePlaces.view);
-app.get('/safePath/:start/:destination', safePath.view);
+app.post('/safePath', safePath.view);
+//app.get('/safePlace', safePlaces.view);
 app.get('/routing', routing.view);
 app.get('/arrival', arrival.view);
 
