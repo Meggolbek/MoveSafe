@@ -17,19 +17,20 @@
 
 
 <br><br>
-  <form method = "post" action="/safePath">
+<!--place holder--> 
+  <form action="/safePath" method="post">
     <div class="form-group centered">
-      <input class="controls"  type="text" name="start" placeholder="enter an origin location">
-      <input id="reset-button-top" type="reset" value="x">
+      <input required id="origin-input" class="controls"  type="text" name="start" placeholder="enter an origin location">
+      <button  id="reset-button-start" onclick="clearTextStart()">x</button>
     </div>
     <div class="form-group centered">
-      <input  class="controls"  type="text" name="destination" placeholder="enter a destination location">
-      <input  id="reset-button-bottom" type="reset" value="x">
+      <input required id="destination-input" class="controls"  type="text" name="destination" placeholder="enter a destination location">
+      <button  id="reset-button-dest" onclick="clearTextDest()">x</button>
     </div>
     <br>
     <div class="form-group centered"> 
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" value="path submit">Search</button>
+        <button id="reset-button-dest" type="submit">Search</button>
       </div>
     </div>
   </form>
@@ -154,5 +155,7 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUdtXMIyuZHmdW2tB8_dvlFtpKIkTVZi4&libraries=places&callback=initMap"
         async defer></script>
+    <script src="/js/MoveSafe.js"></script>
+    <script src="/routes/safePath.js"></script>
   </body>
 </html>
