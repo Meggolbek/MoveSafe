@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2fe35556-8674-4165-a6f1-ebb437af64e3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/safePath.handlebars" afterPath="$PROJECT_DIR$/views/safePath.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.handlebars" afterPath="$PROJECT_DIR$/views/index.handlebars" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,8 +41,8 @@
       <file leaf-file-name="index.handlebars" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/index.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+            <state relative-caret-position="290">
+              <caret line="26" column="122" lean-forward="true" selection-start-line="26" selection-start-column="122" selection-end-line="26" selection-end-column="122" />
               <folding />
             </state>
           </provider>
@@ -179,8 +179,8 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/views/index.handlebars" />
         <option value="$PROJECT_DIR$/views/safePath.handlebars" />
+        <option value="$PROJECT_DIR$/views/index.handlebars" />
       </list>
     </option>
   </component>
@@ -440,7 +440,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49219000" />
+    <option name="totallyTimeSpent" value="49333000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="393" y="33" width="3463" height="2074" extended-state="0" />
@@ -944,8 +944,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.handlebars">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        <state relative-caret-position="290">
+          <caret line="26" column="122" lean-forward="true" selection-start-line="26" selection-start-column="122" selection-end-line="26" selection-end-column="122" />
           <folding />
         </state>
       </provider>
