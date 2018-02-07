@@ -3,6 +3,9 @@
  */
 
 var express = require('express');
+    //require the body-parser nodejs module
+var bodyParser = require('body-parser');
+
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
@@ -10,9 +13,8 @@ var handlebars = require('express3-handlebars');
 var index = require('./routes/index');
 var safePlaces = require('./routes/SafePlaces');
 var safePath = require('./routes/SafePath');
-
-var start = require('./routes/SafePath');
-var destination = require('./routes/SafePath');
+var routing = require('./routes/Routing');
+var arrival = require('./routes/Arrival');
 // Example route
 // var user = require('./routes/user');
 
@@ -32,18 +34,41 @@ app.use(express.cookieParser('IxD secret key'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+//support parsing of application/json type post data
+app.use(bodyParser.json());
+//support parsing of application/x-www-form-urlencoded post data
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // development only
 if ('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
 
+
+
+
 // Add routes here
 app.get('/', index.view);
-app.get('/safePlace', safePlaces.view);
-app.get('/safePlace/:place', safePlaces.view);
-app.get('/safePath/:start/:destination', safePath.view);
+app.post('/safePath', safePath.view);
+//app.get('/safePlace', safePlaces.view);
+app.get('/routing', routing.view);
+app.get('/arrival', arrival.view);
 
+app.post('/safePath', function(req, res){
+    var start = req.body.start;
+    var dest = req.body.destination;
+    if (start != '' && dest != '') {
+        res.redirect('/safePath/' + start + '/' + dest);
+    } else if (start != ''){
+        res.redirect('/safePath/' + start + '/' + start);
+    } else if ( dest != '') {
+        res.redirect('/safePath/' + dest + '/' + dest);
+    }
+    else{
+        res.redirect('/');
+    }
+
+})
 // Example route
 // app.get('/users', user.list);
 

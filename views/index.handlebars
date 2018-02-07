@@ -8,24 +8,35 @@
 
   </head>
   <body>
-  <h1 class="header">Move Safe</h1>
-  <h2 class="centered">Find your safe path</h2>
-  <form method = "post">
+
+<div class="topnav">
+  <a href="javascript:history.back()" id="navigationBar">Back</a>
+  <a href="/" id="navigationBar-active">Home</a>
+  <a padding="100px" id="navigationBarTitle" style="position:absolute;right:0;font-weight:bold; font-family:Century Gothic" align="right">Move Safe</a>
+</div>
+
+
+<br><br>
+<!--place holder--> 
+  <form action="/safePath" method="post">
     <div class="form-group centered">
-      <input required id="origin-input" class="controls" style="display: inline-block; padding: 6px 10px;border-radius: 0; border: 1px solid lightgrey; width: 80vw;"  type="text" name="start" placeholder="enter an origin location">
-      <input type="reset" value="x">
+      <input required id="origin-input" class="controls"  type="text" name="start" placeholder="enter an origin location">
+      <button  id="reset-button-start" onclick="clearTextStart()">x</button>
     </div>
     <div class="form-group centered">
-      <input required id="origin-input" class="controls" style="display: inline-block; padding: 6px 10px;border-radius: 0; border: 1px solid lightgrey; width: 80vw;"  type="text" name="destination" placeholder="enter a destination location">
-      <input type="reset" value="x">
+      <input required id="destination-input" class="controls"  type="text" name="destination" placeholder="enter a destination location">
+      <button  id="reset-button-dest" onclick="clearTextDest()">x</button>
     </div>
     <br>
     <div class="form-group centered"> 
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit">Search</button>
+        <button id="reset-button-dest" type="submit">Search</button>
       </div>
     </div>
   </form>
+
+
+    
 <!--
     <div>
         <h2 class="centered">Looking for these places?</h2>
@@ -144,5 +155,7 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUdtXMIyuZHmdW2tB8_dvlFtpKIkTVZi4&libraries=places&callback=initMap"
         async defer></script>
+    <script src="/js/MoveSafe.js"></script>
+    <script src="/routes/safePath.js"></script>
   </body>
 </html>
