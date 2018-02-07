@@ -23,11 +23,13 @@
 
 #reset-button-start{
 font-family:Century Gothic; padding: 6px 10px;border-radius: 0;border: 1px solid lightgrey;
+font-size:12px
 }
 
 
 #reset-button-dest{
 font-family:Century Gothic; padding: 6px 10px;border-radius: 0;border: 1px solid lightgrey;
+font-size:12px
 }
 
 .controls origin-input{
@@ -123,8 +125,8 @@ body {margin:0;}
       #origin-input,
       #destination-input {
         background-color: #fff;
-        font-family: Roboto;
-        font-size: 15px;
+        font-family: Century Gothic;
+        font-size: 12px;
         font-weight: 300;
         margin-left: 12px;
         padding: 0 11px 0 13px;

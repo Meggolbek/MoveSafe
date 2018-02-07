@@ -51,24 +51,9 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.post('/safePath', safePath.view);
 //app.get('/safePlace', safePlaces.view);
-app.get('/routing', routing.view);
+app.get('/routing/:start/:destination', routing.view);
 app.get('/arrival', arrival.view);
 
-app.post('/safePath', function(req, res){
-    var start = req.body.start;
-    var dest = req.body.destination;
-    if (start != '' && dest != '') {
-        res.redirect('/safePath/' + start + '/' + dest);
-    } else if (start != ''){
-        res.redirect('/safePath/' + start + '/' + start);
-    } else if ( dest != '') {
-        res.redirect('/safePath/' + dest + '/' + dest);
-    }
-    else{
-        res.redirect('/');
-    }
-
-})
 // Example route
 // app.get('/users', user.list);
 
