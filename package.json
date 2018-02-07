@@ -2,7 +2,7 @@
   "name": "MoveSafe",
   "version": "0.0.1",
   "author": "MoveSafe group",
-  "heroku config":"add BUILDPACK_URL=git://github.com/meggolbek/heroku-buildpack-nodejs.git";
+  "heroku config":"add BUILDPACK_URL=git://github.com/meggolbek/heroku-buildpack-nodejs.git",
   "repository": {
     "type": "git",
     "url": "https://github.com/Meggolbek/MoveSafe"
