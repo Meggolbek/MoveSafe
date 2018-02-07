@@ -24,7 +24,7 @@
 
 
 <!--place holder--> 
-  <form method = "post">
+  <form action="/views/safePath/" method = "post">
     <div class="form-group centered">
       <input required id="origin-input" class="controls"  type="text" name="start">
       <button  id="reset-button-start" onclick="clearTextStart()">x</button>
@@ -52,10 +52,10 @@
         document.getElementById("origin-input").value = "{{start}}";
         document.getElementById("destination-input").value = "{{destination}}";
     });
-
-
-
 </script>
+<script src="/routes/SafePath.js"></script>
+
+
    <!-- <script>
       // This example requires the Places library. Include the libraries=places
       // parameter when you first load the API. For example:

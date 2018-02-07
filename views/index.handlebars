@@ -19,7 +19,7 @@
 
 <br><br>
 <!--place holder--> 
-  <form method = "post">
+  <form action="/safePath" method="post">
     <div class="form-group centered">
       <input required id="origin-input" class="controls"  type="text" name="start" placeholder="enter an origin location">
       <button  id="reset-button-start" onclick="clearTextStart()">x</button>
@@ -157,5 +157,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUdtXMIyuZHmdW2tB8_dvlFtpKIkTVZi4&libraries=places&callback=initMap"
         async defer></script>
     <script src="/js/MoveSafe.js"></script>
+    <script src="/routes/safePath.js"></script>
   </body>
 </html>
