@@ -51,7 +51,8 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.post('/safePath', safePath.view);
 //app.get('/safePlace', safePlaces.view);
-app.get('/routing/:start/:destination', routing.view);
+//app.get('/routing/:start/:destination', routing.view);
+app.get('/routing', routing.view);
 app.get('/arrival', arrival.view);
 
 // Example route

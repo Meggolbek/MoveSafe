@@ -5,7 +5,9 @@
     background-color: #e5e5e5;
 }
 .footer:before{
-    border: 1px solid black;
+    content:' ';
+    display:block;
+    border:1px solid black;
 }
 
 #reset-button-start{
