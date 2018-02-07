@@ -18,29 +18,33 @@
 <div class="topnav">
   <a href="javascript:history.back()" id="navigationBar">Back</a>
   <a href="/" id="navigationBar">Home</a>
-  <a padding="100px" id="navigationBarTitle" style="position:absolute;right:0;font-weight:bold; font-family:Century Gothic" align="right">Find a safe path</a>
+  <a padding="100px" id="navigationBarTitle" style="position:absolute;right:0;font-weight:bold; font-family:Century Gothic" >Find a safe path</a>
 </div>
 
 
 
 <!--place holder--> 
-  <form action="/views/safePath/" method = "post">
+  <form action="/safePath" method="post">
     <div class="form-group centered">
-      <input required id="origin-input" class="controls"  type="text" name="start">
+      <input required id="origin-input" class="controls"  type="text" name="start" placeholder="enter an origin location">
       <button  id="reset-button-start" onclick="clearTextStart()">x</button>
     </div>
     <div class="form-group centered">
-      <input required id="destination-input" class="controls"  type="text" name="destination">
+      <input required id="destination-input" class="controls"  type="text" name="destination" placeholder="enter a destination location">
       <button  id="reset-button-dest" onclick="clearTextDest()">x</button>
     </div>
     <br>
     <div class="form-group centered"> 
       <div class="col-sm-offset-2 col-sm-10">
-        <button id="reset-button-dest" type="submit">Search</button>
+        <button id="reset-button-dest" style="position:absolute; right:24vw; font-size:10px" type="submit">new search</button>
       </div>
     </div>
   </form>
 
+
+
+
+<br>
 <br>
 <!--map--> 
 <div class="centered" >
