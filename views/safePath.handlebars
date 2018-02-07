@@ -16,46 +16,47 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 </head>
 
 <body>
 
 
-<div class="topnav">
-  <a href="javascript:history.back()" id="navigationBar">Back</a>
-  <a href="/" id="navigationBar">Home</a>
-  <a padding="100px" id="navigationBarTitle" style="position:absolute;right:0;font-weight:bold; font-family:Century Gothic" align="right">Find a safe path</a>
+<!--<div class="topnav">-->
+  <!--<a href="javascript:history.back()" id="navigationBar">Back</a>-->
+  <!--<a href="/" id="navigationBar">Home</a>-->
+  <!--<a padding="100px" id="navigationBarTitle" style="position:absolute;right:0;font-weight:bold; font-family:Century Gothic" align="right">Find a safe path</a>-->
+<!--</div>-->
+<div>
+    <a style="color: black;" href="javascript:history.back()"><i style="font-size: 20px; position:absolute; left:10px" class="fas fa-angle-left"></i></a>
+    <a href="/" style="color: black"><i class="fas fa-home" style="font-size: 20px; position:absolute; right:10px"></i></a>
+    <h3 align="center">Find A Safe Path</h3>
 </div>
 
-
-
-<!--place holder--> 
+<div>
+<!--place holder-->
   <form action="/views/safePath/" method = "post">
     <div class="form-group centered">
       <input required id="origin-input" class="controls"  type="text" name="start">
-      <button  id="reset-button-start" onclick="clearTextStart()">x</button>
+      <!--<button  id="reset-button-start" onclick="clearTextStart()">x</button>-->
     </div>
     <div class="form-group centered">
       <input required id="destination-input" class="controls"  type="text" name="destination">
-      <button  id="reset-button-dest" onclick="clearTextDest()">x</button>
+      <!--<button  id="reset-button-dest" onclick="clearTextDest()">x</button>-->
     </div>
     <br>
     <div class="form-group centered"> 
       <div class="col-sm-offset-2 col-sm-10">
-        <button id="reset-button-dest" type="submit">Search</button>
+        <button type="submit">Search</button>
       </div>
     </div>
   </form>
 
-<br>
 <!--map--> 
 <div class="centered" >
-    <img style= "width: 90vw; height: 60vh;"src= "/images/PlaceHolderSafePath.png" alt="Image not responding">
+    <img style= "width: 90vw; height: 40vh;"src= "/images/PlaceHolderSafePath_noColor.png" alt="Image not responding">
 </div>
 
-
-<br>
 <!--information of path-->
 
 
@@ -73,22 +74,35 @@
 <!--</div>-->
 
 
-<div class="card text-center ml-5 form-group centered" style="float: left; display: inline-block; width: 90vw; height: 26vh;">
-    <div class="card-body" style="display: inline-block;">
-        <h5 class="card-title">Selected Path Information</h5>
-        <p class="card-text">
-            <ul>
-                <ol style="padding-left: 0px;">Safety Level: 1</ol>
-                <ol style="padding-left: 0px;">ETA: 2 min</ol>
-            </ul>
-        </p>
+<!--<div class="card text-center ml-5 form-group centered" style="float: left; display: inline-block; width: 90vw; height: 26vh;">-->
+    <!--<div class="card-body" style="display: inline-block;">-->
+        <!--<h5 class="card-title">Selected Path Information</h5>-->
+        <!--<p class="card-text">-->
+            <!--<ul>-->
+                <!--<ol style="padding-left: 0px;">Safety Level: 1</ol>-->
+                <!--<ol style="padding-left: 0px;">ETA: 2 min</ol>-->
+            <!--</ul>-->
+        <!--</p>-->
+    <!--</div>-->
+    <!--<div>-->
+        <!--<a href="/routing" style="display: inline-block;"><button class="places-button">Start</button></a>-->
+    <!--</div>-->
+<!--</div>-->
+    <div style="margin-top: 5px">
+        <table align="center">
+            <tr>
+                <td style="border: solid"><div>
+                    <ul text-align="center">
+                        <ol text-align="center" style="padding-left: 0">Safety Level: 1</ol>
+                        <ol style="padding-left: 0">ETA: 2 min</ol>
+                    </ul>
+                </div></td>
+                <td style="border: solid"><div>
+                    <a href="/routing"><button class="places-button">Start</button></a>
+                </div></td>
+            </tr>
+        </table>
     </div>
-    <div>
-        <a href="/routing" class="btn btn-info btn-lg" style="display: inline-block;">Start</a>
-    </div>
-</div>
-
-<br>
 
 
 <!--<div class="btn-toolbar mb-5 centered" role="toolbar" aria-label="Toolbar with button groups" style="float: left; display: inline-block; padding-left: 10%;">-->
