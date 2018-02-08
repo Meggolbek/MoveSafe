@@ -1,11 +1,9 @@
 exports.view = function(req, res){
-	var start = req.body.start;
-    var destination = req.body.destination;
+	var start = req.params.start;
+    var destination = req.params.destination;
     console.log("post received: %s %s COUCOU" , start, destination);
-    res.render('safePath', {
+    res.render('routing', {
         'start': start,
         'destination' : destination
     });
 };
-
-
