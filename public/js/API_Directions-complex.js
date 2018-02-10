@@ -45,10 +45,9 @@
           // Route the directions and pass the response to a function to create
           // markers for each step.
           if (status === 'OK') {
-            document.getElementById('warnings-panel').innerHTML =
-                '<b>' + response.routes[0].warnings + '</b>';
+            document.getElementById('warnings-panel').innerHTML ='<b>' + response.routes[0].warnings + '</b>';
             directionsDisplay.setDirections(response);
-            showSteps(response, markerArray, stepDisplay, map);
+            //showSteps(response, markerArray, stepDisplay, map);
           } else {
             window.alert('Directions request failed due to ' + status);
           }

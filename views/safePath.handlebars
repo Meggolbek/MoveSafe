@@ -9,8 +9,8 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-
     <![endif]-->
+
     <!--bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -53,17 +53,17 @@
 <!--place holder--> 
   <form action="/safePath" method = "post">
     <div class="form-group centered">
-      <input required id="origin-input" class="controls"  type="text" name="start">
+      <input required id="origin-input" class="controls"  type="text" value= "{{start}}" name="start" placeholder="enter an origin location">
       <!--<button  id="reset-button-start" onclick="clearTextStart()">x</button>-->
     </div>
     <div class="form-group centered">
-      <input required id="destination-input" class="controls"  type="text" name="destination">
+      <input required id="destination-input" class="controls"  type="text" value="{{destination}}" name="destination" placeholder="enter a destination location">
       <!--<button  id="reset-button-dest" onclick="clearTextDest()">x</button>-->
     </div>
     <br>
     <div class="form-group centered">
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit">Search</button>
+        <button type="submit">new search</button>
       </div>
     </div>
   </form>
@@ -80,6 +80,7 @@
                     <ul text-align="center">
                         <ol text-align="center" style="padding-left: 0">Safety Level: 1</ol>
                         <ol style="padding-left: 0">ETA: 2 min</ol>
+                        <div id="warnings-panel"></div>
                     </ul>
                 </div></td>
                 <td style="border: solid"><div>
