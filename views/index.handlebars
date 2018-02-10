@@ -5,76 +5,57 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <link href="/css/MoveSafe.css" rel="stylesheet">
-
+      <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   </head>
   <body>
 
-<div class="topnav">
-  <a href="javascript:history.back()" id="navigationBar">Back</a>
-  <a href="/" id="navigationBar-active">Home</a>
-  <a padding="100px" id="navigationBarTitle" style="position:absolute;right:0;font-weight:bold; font-family:Century Gothic" align="right">Move Safe</a>
+<!--<div class="topnav">-->
+  <!--<a href="javascript:history.back()" id="navigationBar">Back</a>-->
+  <!--<a href="/" id="navigationBar-active">Home</a>-->
+  <!--<a padding="100px" id="navigationBarTitle" style="position:absolute;right:0;font-weight:bold; font-family:Century Gothic" align="right">Move Safe</a>-->
+<!--</div>-->
+<div >
+    <h1 align="center"> Move Safe</h1>
+    <h3 align="center">Find A Safe Path</h3>
 </div>
 
-
-<br><br>
+<br>
 <!--place holder--> 
   <form action="/safePath" method="post">
     <div class="form-group centered">
+        <i class="fas fa-map-marker"></i>
       <input required id="origin-input" class="controls"  type="text" name="start" placeholder="enter an origin location">
-      <button  id="reset-button-start" onclick="clearTextStart()">x</button>
+      <!--<button  id="reset-button-start" onclick="clearTextStart()">x</button>-->
     </div>
     <div class="form-group centered">
+        <i class="fas fa-map-marker"></i>
       <input required id="destination-input" class="controls"  type="text" name="destination" placeholder="enter a destination location">
-      <button  id="reset-button-dest" onclick="clearTextDest()">x</button>
+      <!--<button  id="reset-button-dest" onclick="clearTextDest()">x</button>-->
     </div>
     <br>
     <div class="form-group centered"> 
       <div class="col-sm-offset-2 col-sm-10">
-        <button id="reset-button-dest" type="submit">Search</button>
+        <button type="submit">Search</button>
       </div>
     </div>
   </form>
 
-
-    
-<!--
-    <div>
-        <h2 class="centered">Looking for these places?</h2>
-        <div class="centered">
-            {{#each row1}}
-                <a href="safePlace/{{place}}"><button id="{{id}}" class="places-button">
-                    {{place}}
-                </button></a>
-            {{/each}}
-        </div>
-        <div class="centered">
-            {{#each row2}}
-                <a href="safePlace/{{place}}"><button id="{{id}}" class="places-button">
-                    {{place}}
-                </button></a>
-            {{/each}}
-        </div>
-    </div>
--->
-    <script>
-      // This example requires the Places library. Include the libraries=places
-      // parameter when you first load the API. For example:
-      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
-      function initMap() {
+<script>
+    // This example requires the Places library. Include the libraries=places
+    // parameter when you first load the API. For example:
+    // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+    function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          mapTypeControl: false,
-          center: {lat: -33.8688, lng: 151.2195},
-          zoom: 13
+            mapTypeControl: false,
+            center: {lat: -33.8688, lng: 151.2195},
+            zoom: 13
         });
-
         new AutocompleteDirectionsHandler(map);
-      }
-
-       /**
-        * @constructor
-       */
-      function AutocompleteDirectionsHandler(map) {
+    }
+    /**
+     * @constructor
+     */
+    function AutocompleteDirectionsHandler(map) {
         this.map = map;
         this.originPlaceId = null;
         this.destinationPlaceId = null;
@@ -85,77 +66,67 @@
         this.directionsService = new google.maps.DirectionsService;
         this.directionsDisplay = new google.maps.DirectionsRenderer;
         this.directionsDisplay.setMap(map);
-
         var originAutocomplete = new google.maps.places.Autocomplete(
-            originInput, {placeIdOnly: true});
+                originInput, {placeIdOnly: true});
         var destinationAutocomplete = new google.maps.places.Autocomplete(
-            destinationInput, {placeIdOnly: true});
-
+                destinationInput, {placeIdOnly: true});
         this.setupClickListener('changemode-walking', 'WALKING');
         this.setupClickListener('changemode-transit', 'TRANSIT');
         this.setupClickListener('changemode-driving', 'DRIVING');
-
         this.setupPlaceChangedListener(originAutocomplete, 'ORIG');
         this.setupPlaceChangedListener(destinationAutocomplete, 'DEST');
-
         this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
         this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(destinationInput);
         this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(modeSelector);
-      }
-
-      // Sets a listener on a radio button to change the filter type on Places
-      // Autocomplete.
-      AutocompleteDirectionsHandler.prototype.setupClickListener = function(id, mode) {
+    }
+    // Sets a listener on a radio button to change the filter type on Places
+    // Autocomplete.
+    AutocompleteDirectionsHandler.prototype.setupClickListener = function(id, mode) {
         var radioButton = document.getElementById(id);
         var me = this;
         radioButton.addEventListener('click', function() {
-          me.travelMode = mode;
-          me.route();
+            me.travelMode = mode;
+            me.route();
         });
-      };
-
-      AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function(autocomplete, mode) {
+    };
+    AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function(autocomplete, mode) {
         var me = this;
         autocomplete.bindTo('bounds', this.map);
         autocomplete.addListener('place_changed', function() {
-          var place = autocomplete.getPlace();
-          if (!place.place_id) {
-            window.alert("Please select an option from the dropdown list.");
-            return;
-          }
-          if (mode === 'ORIG') {
-            me.originPlaceId = place.place_id;
-          } else {
-            me.destinationPlaceId = place.place_id;
-          }
-          me.route();
+            var place = autocomplete.getPlace();
+            if (!place.place_id) {
+                window.alert("Please select an option from the dropdown list.");
+                return;
+            }
+            if (mode === 'ORIG') {
+                me.originPlaceId = place.place_id;
+            } else {
+                me.destinationPlaceId = place.place_id;
+            }
+            me.route();
         });
-
-      };
-
-      AutocompleteDirectionsHandler.prototype.route = function() {
+    };
+    AutocompleteDirectionsHandler.prototype.route = function() {
         if (!this.originPlaceId || !this.destinationPlaceId) {
-          return;
+            return;
         }
         var me = this;
-
         this.directionsService.route({
-          origin: {'placeId': this.originPlaceId},
-          destination: {'placeId': this.destinationPlaceId},
-          travelMode: this.travelMode
+            origin: {'placeId': this.originPlaceId},
+            destination: {'placeId': this.destinationPlaceId},
+            travelMode: this.travelMode
         }, function(response, status) {
-          if (status === 'OK') {
-            me.directionsDisplay.setDirections(response);
-          } else {
-            window.alert('Directions request failed due to ' + status);
-          }
+            if (status === 'OK') {
+                me.directionsDisplay.setDirections(response);
+            } else {
+                window.alert('Directions request failed due to ' + status);
+            }
         });
-      };
-
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUdtXMIyuZHmdW2tB8_dvlFtpKIkTVZi4&libraries=places&callback=initMap"
+    };
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUdtXMIyuZHmdW2tB8_dvlFtpKIkTVZi4&libraries=places&callback=initMap"
         async defer></script>
-    <script src="/js/MoveSafe.js"></script>
-    <script src="../MoveSafe/routes/SafePath.js"></script>
+<script src="/js/MoveSafe.js"></script>
+<script src="../MoveSafe/routes/SafePath.js"></script>
   </body>
 </html>
