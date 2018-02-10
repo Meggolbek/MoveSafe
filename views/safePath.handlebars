@@ -20,7 +20,7 @@
     <script src="/js/API_Directions-complex.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS6-vX7RQf9E6NV3F5rytl_Eh_ALQNIlE&callback=initMap">
     </script>
-    <link href="/css/Directions-complex.css"></link>
+    <link href="/css/Directions-complex.css">
 
 </head>
 
@@ -69,48 +69,10 @@
   </form>
 
 <!--map-->
-<div class="centered" >
-    <img style= "width: 90vw; height: 40vh;"src= "/images/PlaceHolderSafePath_noColor.png" alt="Image not responding">
-</div>
+    <div id="map"></div>
+    &nbsp;
 
-<!--&lt;!&ndash;map&ndash;&gt; -->
-    <!--<div id="map"></div>-->
-    <!--&nbsp;-->
-
-<!--<br>-->
 <!--information of path-->
-
-
-<!--<div class="pathInfo centered">-->
-    <!--<div class="col-sm-6 pathInfo" style="float: left; display: inline-block; padding-left: 10%;">-->
-        <!--<h5>Selected Path Information</h5>-->
-        <!--<ul>-->
-            <!--<ol>Safety Level: 1</ol>-->
-            <!--<ol>ETA: 2 min</ol>-->
-        <!--</ul>-->
-    <!--</div>-->
-    <!--<div class="col-sm-6">-->
-        <!--<button  id="reset-button" type="submit" style="display: inline-block; font-style: italic;">Start</button>-->
-    <!--</div>-->
-<!--</div>-->
-
-
-<!--<div class="card-body centered" style="display: inline-block;">-->
-    <!--<h5 class="card-title">Selected Path Information</h5>-->
-    <!--<p class="card-text">-->
-    <!--<ul>-->
-        <!--<ol style="padding-left: 0px;">Safety Level: 1</ol>-->
-        <!--<ol style="padding-left: 0px;">ETA: 2 min</ol>-->
-        <!--<div id="warnings-panel"></div>-->
-    <!--</ul>-->
-    <!--</p>-->
-    <!--<div>-->
-        <!--<a href="/routing/{{start}}/{{destination}}" class="btn btn-info btn-lg" style="display: inline-block; font-size: 12px">Start</a>-->
-    <!--</div>-->
-<!--</div>-->
-<!--</div>-->
-
-<!--<br>-->
     <div style="margin-top: 5px" class="footer">
         <table style="margin-top: 10px" align="center">
             <tr>
@@ -126,30 +88,6 @@
             </tr>
         </table>
     </div>
-
-
-<!--<div class="btn-toolbar mb-5 centered" role="toolbar" aria-label="Toolbar with button groups" style="float: left; display: inline-block; padding-left: 10%;">-->
-    <!--<div class="input-group">-->
-        <!--<div class="input-group-prepend">-->
-            <!--<div>-->
-                <!--<h5>Selected Path Information</h5>-->
-                <!--<ol>Safety Level: 1</ol>-->
-                <!--<ol>ETA: 2 min</ol>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="btn-group ml-4 pl-4" role="group" aria-label="First group">-->
-        <!--<button type="button" class="btn btn-light btn-lg ">Start</button>-->
-    <!--</div>-->
-<!--</div>-->
-
-
-
-
-
-
-
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script>
