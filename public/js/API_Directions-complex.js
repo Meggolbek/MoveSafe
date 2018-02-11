@@ -90,11 +90,14 @@ var map;
           travelMode: 'WALKING'
         }, function(response, status) {
             if (status == google.maps.DirectionsStatus.OK) {
+                if(renderer.getRouteIndex()==undefined){
+                    renderer.setRouteIndex(0);
+                    $("#ETA").text("ETA: " + response.routes[0].legs[0].duration.text);
+                };
                 renderer.setDirections(response);
                 renderer.setMap(map);
                 //renderer.setPanel(panel);
                 renderDirectionsPolylines(response);
-                console.log(renderer.getDirections());
             } else {
                 renderer.setMap(null);
                 renderer.setPanel(null);
@@ -127,9 +130,6 @@ function renderDirectionsPolylines(response) {
     for (var i=0; i<polylines.length; i++) {
         polylines[i].setMap(null);
     }
-    if(renderer.getRouteIndex()==undefined){
-        renderer.setRouteIndex(0);
-    }
     for(var a=0; a<response.routes.length; a++) {
         var legs = response.routes[a].legs;
         for (i = 0; i < legs.length; i++) {
@@ -155,7 +155,7 @@ function renderDirectionsPolylines(response) {
 function attachListener(num, stepPolyline, response) {
     return google.maps.event.addListener(stepPolyline, 'click', function (evt) {
         renderer.setRouteIndex(num);
-        console.log("index: " + renderer.getRouteIndex());
+        $("#ETA").text("ETA: " + response.routes[renderer.getRouteIndex()].legs[0].duration.text);
         renderDirectionsPolylines(response);
         })
 }
