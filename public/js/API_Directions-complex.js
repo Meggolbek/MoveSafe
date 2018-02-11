@@ -30,6 +30,7 @@
 
       function calculateAndDisplayRoute(directionsDisplay, directionsService,
           markerArray, stepDisplay, map) {
+
         // First, remove any existing markers from the map.
         for (var i = 0; i < markerArray.length; i++) {
           markerArray[i].setMap(null);
@@ -40,6 +41,7 @@
         directionsService.route({
           origin: document.getElementById('origin-input').value,
           destination: document.getElementById('destination-input').value,
+          provideRouteAlternatives: true,
           travelMode: 'WALKING'
         }, function(response, status) {
           // Route the directions and pass the response to a function to create
@@ -47,6 +49,13 @@
           if (status === 'OK') {
             document.getElementById('warnings-panel').innerHTML ='<b>' + response.routes[0].warnings + '</b>';
             directionsDisplay.setDirections(response);
+            for (var i = 0, len = 3; i < len; i++) {
+                new google.maps.DirectionsRenderer({
+                    map: map,
+                    directions: response,
+                    routeIndex: i
+                });
+            }
             //showSteps(response, markerArray, stepDisplay, map);
           } else {
             window.alert('Directions request failed due to ' + status);
