@@ -1,6 +1,9 @@
      function initMap() {
         var markerArray = [];
 
+        console.log("hererererer!");
+
+
         // Instantiate a directions service.
         var directionsService = new google.maps.DirectionsService;
 
@@ -28,7 +31,24 @@
         };
         document.getElementById('origin-input').addEventListener('change', onChangeHandler);
         document.getElementById('destination-input').addEventListener('change', onChangeHandler);
-      }
+
+
+
+         console.log("about to load geoJson file!");
+         // map.data.loadGeoJson('https://storage.googleapis.com/mapsdevsite/json/google.json');
+         map.data.loadGeoJson('https://raw.githubusercontent.com/Meggolbek/MoveSafe/mapLayerSparrow/public/neighborhood_files/ZillowNeighborhoods-CA.json');
+
+
+         map.data.setStyle({
+             fillColor: 'red',
+             strokeWeight: 1
+         });
+
+
+
+
+
+         }
 
       function calculateAndDisplayRoute(directionsDisplay, directionsService,
           markerArray, stepDisplay, map) {
