@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/MoveSafe.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <!--MAP API-->
     <link href="/css/Routing-ggl.css" rel="stylesheet">
     <script src="/js/API_Routing.js"></script>
@@ -19,27 +20,43 @@
 </head>
 <body>
 
-<div class="topnav">
-  <a href="javascript:history.back()" id="navigationBar">Back</a>
-  <a href="/" id="navigationBar">Home</a>
-  <a padding="100px" id="navigationBarTitle" style="position:absolute;right:0;font-weight:bold; font-family:Century Gothic" align="right">Routing</a>
+<!--<div class="topnav">-->
+  <!--<a href="javascript:history.back()" id="navigationBar">Back</a>-->
+  <!--<a href="/" id="navigationBar">Home</a>-->
+  <!--<a padding="100px" id="navigationBarTitle" style="position:absolute;right:0;font-weight:bold; font-family:Century Gothic" align="right">Routing</a>-->
+<!--</div>-->
+<div>
+    <a style="color: black;" href="javascript:history.back()"><i style="font-size: 20px; position:absolute; left:10px" class="fas fa-angle-left"></i></a>
+    <a href="/" style="color: black"><i class="fas fa-home" style="font-size: 20px; position:absolute; right:10px"></i></a>
+    <h3 align="center">Routing</h3>
 </div>
 
 <br>
-<!--map--> 
-    <div id="floating-panel">
-      <strong>Start:</strong>
-      <select id="origin-input">
-        <option value="start">{{start}}</option>
-      </select>
-      <br>
-      <strong>End:</strong>
-      <select id="destination-input">
-        <option value="destination">{{destination}}</option>
-      </select>
-    </div>
-    <div id="right-panel"></div>
-    <div id="map"></div>
+
+<!--map-->
+<div id="floating-panel">
+    <strong>Start:</strong>
+    <input id="origin-input" value= "{{start}}" name="start">
+    <br>
+    <strong>End:</strong>
+    <input id="destination-input" value="{{destination}}" name="destination">
+</div>
+<div id="right-panel"></div>
+<div id="map">
 <script src="https://code.jquery.com/jquery.js"></script>
+
+<!--Getting start and destination elements-->
+<script language="JavaScript">
+  function processUser()
+  {var parameters = location.search.substring(1).split("&");
+
+    var start = parameters[0].split("=");
+    var start_value = unescape(temp[1]);
+    var destination = parameters[1].split("=");
+    var destination_value = unescape(temp[1]);
+    document.getElementById("origin-input").innerHTML = start_value;
+    document.getElementById("destination-input").innerHTML = destination_value;
+  }
+</script>
 </body>
 </html>
