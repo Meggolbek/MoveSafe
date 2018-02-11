@@ -32,21 +32,31 @@
 </div>
 
 <br>
-<!--map-->
+
 <!--map-->
 <div id="floating-panel">
     <strong>Start:</strong>
-    <select id="origin-input">
-        <option value="start">{{start}}</option>
-    </select>
+    <input id="origin-input" value= "{{start}}" name="start">
     <br>
     <strong>End:</strong>
-    <select id="destination-input">
-        <option value="destination">{{destination}}</option>
-    </select>
+    <input id="destination-input" value="{{destination}}" name="destination">
 </div>
 <div id="right-panel"></div>
 <div id="map">
 <script src="https://code.jquery.com/jquery.js"></script>
+
+<!--Getting start and destination elements-->
+<script language="JavaScript">
+  function processUser()
+  {var parameters = location.search.substring(1).split("&");
+
+    var start = parameters[0].split("=");
+    var start_value = unescape(temp[1]);
+    var destination = parameters[1].split("=");
+    var destination_value = unescape(temp[1]);
+    document.getElementById("origin-input").innerHTML = start_value;
+    document.getElementById("destination-input").innerHTML = destination_value;
+  }
+</script>
 </body>
 </html>
