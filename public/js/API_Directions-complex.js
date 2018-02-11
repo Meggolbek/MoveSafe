@@ -39,9 +39,35 @@
          map.data.loadGeoJson('https://raw.githubusercontent.com/Meggolbek/MoveSafe/mapLayerSparrow/public/neighborhood_files/ZillowNeighborhoods-CA.json');
 
 
-         map.data.setStyle({
-             fillColor: 'red',
-             strokeWeight: 1
+         // map.data.setStyle({
+         //     fillColor: 'red',
+         //     strokeWeight: 1
+         // });
+
+         // Color Capital letters blue, and lower case letters red.
+         // Capital letters are represented in ascii by values less than 91
+         map.data.setStyle(function(feature) {
+             var regionid = feature.getProperty('RegionID');
+             var type = regionid % 5;
+             // var color = type == 0 ? '#f00' : '#0f0';
+             var color;
+             if(type == 0) {
+                 color = '#009933';
+             } else if (type == 1) {
+                 color = '#99ff33';
+             } else if (type == 2) {
+                 color = '#ffff00';
+             } else if (type == 3) {
+                 color = '#ff9900';
+             } else if (type == 4) {
+                 color = '#ff0000';
+             }
+
+
+             return {
+                 fillColor: color,
+                 strokeWeight: 1
+             };
          });
 
 
