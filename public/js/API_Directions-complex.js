@@ -4,11 +4,13 @@
         // Instantiate a directions service.
         var directionsService = new google.maps.DirectionsService;
 
-        // Create a map and center it on Manhattan.
+        // Create a map and center it on ucsd.
+
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 13,
-          center: {lat: 40.771, lng: -73.974}
+          center: {lat: 32.879736, lng: -117.235934}
         });
+
 
         // Create a renderer for directions and bind it to the map.
         var directionsDisplay = new google.maps.DirectionsRenderer({map: map});
