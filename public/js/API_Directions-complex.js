@@ -6,8 +6,6 @@ var map;
      function initMap() {
         var markerArray = [];
 
-        console.log("hererererer!");
-
 
         // Instantiate a directions service.
         var directionsService = new google.maps.DirectionsService;
@@ -23,8 +21,16 @@ var map;
           zoom: 13,
           center: {lat: 32.879736, lng: -117.235934},
                     mapTypeControl: true,
+<<<<<<< HEAD
           mapTypeControlOptions: false,
           disableDefaultUI: true
+=======
+          mapTypeControlOptions: {
+              mapTypeIds: [],
+              style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+              position: google.maps.ControlPosition.LEFT_BOTTOM,
+          }
+>>>>>>> 610755c09a2481e8dea5f7b58dcf380a7125fdc8
         });
 
         // Create a renderer for directions and bind it to the map.

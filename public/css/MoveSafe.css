@@ -76,6 +76,10 @@ font-size:12px
     overflow: hidden;
 }
 
+.navBar {
+    background-color: #3FBBBF;
+}
+
 /* Style the links inside the navigation bar */
 #navigationBar {
     float: left;
@@ -155,7 +159,6 @@ body {margin:0;}
         margin-left: 12px;
         padding: 0 11px 0 13px;
         text-overflow: ellipsis;
-        width: 270px;
       }
 
       #origin-input:focus,
