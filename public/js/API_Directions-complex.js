@@ -6,8 +6,6 @@ var map;
      function initMap() {
         var markerArray = [];
 
-        console.log("hererererer!");
-
 
         // Instantiate a directions service.
         var directionsService = new google.maps.DirectionsService;
@@ -21,9 +19,12 @@ var map;
          });
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 13,
-          center: {lat: 32.879736, lng: -117.235934}
-        });
+          center: {lat: 32.879736, lng: -117.235934},
+                    mapTypeControl: true,
+          mapTypeControlOptions: false,
+          disableDefaultUI: true
 
+        });
 
         // Create a renderer for directions and bind it to the map.
         var directionsDisplay = new google.maps.DirectionsRenderer({map: map});
@@ -38,9 +39,6 @@ var map;
         var onChangeHandler = function() {
           calculateAndDisplayRoute();
         };
-        document.getElementById('origin-input').addEventListener('change', onChangeHandler);
-        document.getElementById('destination-input').addEventListener('change', onChangeHandler);
-
 
 
          console.log("about to load geoJson file!");

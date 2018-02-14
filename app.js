@@ -14,6 +14,10 @@ var index = require('./routes/index');
 var safePath = require('./routes/SafePath');
 var routing = require('./routes/Routing');
 var arrival = require('./routes/Arrival');
+var login = require('./routes/login');
+var add = require('./routes/add');
+
+
 // Example route
 // var user = require('./routes/user');
 
@@ -47,11 +51,20 @@ if ('development' == app.get('env')) {
 
 
 // Add routes here
-app.get('/', index.view);
+// app.get('/', index.view);
+// app.post('/safePath', safePath.view);
+// //app.get('/routing/:start/:destination', routing.view);
+// app.get('/routing/:start/:destination', routing.view);
+// app.get('/arrival', arrival.view);
+// app.get('/login', login.view);
+
+app.get('/index', index.view);
 app.post('/safePath', safePath.view);
-//app.get('/routing/:start/:destination', routing.view);
 app.get('/routing/:start/:destination', routing.view);
 app.get('/arrival', arrival.view);
+app.get('/', login.view);
+app.get('/add',add.addUser);
+
 
 // Example route
 // app.get('/users', user.list);

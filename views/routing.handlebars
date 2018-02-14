@@ -6,51 +6,38 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/MoveSafe.css" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <!--MAP API-->
-    <link href="/css/Routing-ggl.css" rel="stylesheet">
-    <script src="/js/API_Routing.js"></script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS6-vX7RQf9E6NV3F5rytl_Eh_ALQNIlE&callback=initMap">
-    </script>
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="/css/Routing-ggl.css" rel="stylesheet">
+    <script src="/js/API_Routing.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS6-vX7RQf9E6NV3F5rytl_Eh_ALQNIlE&callback=initMap">
+    </script>
+    <link href="/css/Directions-complex.css">
 </head>
 <body>
-
-<!--<div class="topnav">-->
-  <!--<a href="javascript:history.back()" id="navigationBar">Back</a>-->
-  <!--<a href="/" id="navigationBar">Home</a>-->
-  <!--<a padding="100px" id="navigationBarTitle" style="position:absolute;right:0;font-weight:bold; font-family:Century Gothic" align="right">Routing</a>-->
-<!--</div>-->
-<div>
-    <a style="color: black;" href="javascript:history.back()"><i style="font-size: 20px; position:absolute; left:10px" class="fas fa-angle-left"></i></a>
-    <a href="/" style="color: black"><i class="fas fa-home" style="font-size: 20px; position:absolute; right:10px"></i></a>
-    <h3 align="center">Routing</h3>
+<div class="topnav card-block">
+    <div>
+        <a style="position:absolute;left:25vw;" id="navigationBarTitle" >Routing</a>
+    </div>
 </div>
-
-<br>
-
+<div class="navBar card-block" style="text-align: center">
+    <a href="/index" id="navigationBar hover" style="color:white; align: center">Home</a>
+    <a href="javascript:history.back()" style="color:white; float: left; padding-left: 10%">Back</a>
+    <a href="/" style="color:white; float: right; padding-right: 10%">Logout</a>
+</div>
 <!--map-->
-    <param id="origin-input" value= "{{start}}" name="start">
-    <param id="destination-input" value="{{destination}}" name="destination">
+    <param id="origin-input-route" value= "{{start}}" name="start">
+    <param id="destination-input-route" value="{{destination}}" name="destination">
 <div id="right-panel"></div>
+
 <script src="https://code.jquery.com/jquery.js"></script>
-
-<!--Getting start and destination elements-->
-<script language="JavaScript">
-  function processUser()
-  {var parameters = location.search.substring(1).split("&");
-
-    var start = parameters[0].split("=");
-    var start_value = unescape(temp[1]);
-    var destination = parameters[1].split("=");
-    var destination_value = unescape(temp[1]);
-    document.getElementById("origin-input").innerHTML = start_value;
-    document.getElementById("destination-input").innerHTML = destination_value;
-  }
-</script>
 </body>
 </html>
