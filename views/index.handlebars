@@ -1,54 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MoveSafe - Safe Path</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <link href="/css/MoveSafe.css" rel="stylesheet">
-      <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href="/css/bootstrap.css" rel="stylesheet">
-      <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-
-          <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
-<script src="js/GooglePlaces.js"></script>
-    <style>
-      #address td {
-        font-size: 10pt;
-      }
-    </style>
-  </head>
-  <body>
-
-
-<div class="topnav card-block">
-  <!--<a href="/" id="navigationBar-active"><img src="images/home.png"height="20" width="20"></a>-->
-  <a padding="100px" id="navigationBarTitle" style="position:absolute;right:0;font-weight:bold; font-family:Century Gothic" align="right">Move Safe</a>
-</div>
-<br>
-<br>
-<div class="col-md-6 main-div mx-auto" >
-    <div class="card" style="margin:30px 0 0 0;">
-        <div class="card-block" style="width: 270px";>
-            <div class="card-header" style="font-family:Century Gothic; ">
-                <h1 style="margin:0 0 0 40px">Find a Safe Path</h1>
-            </div>
-        </div>
-    </div>
-</div>
-<br>
-<br>
+      <title>MoveSafe</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="/css/MoveSafe.css" rel="stylesheet">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+      <!--bootstrap-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <link href="/css/Directions-complex.css">
+</head>
+<body>
+  <div class="topnav card-block">
+      <div>
+          <a style="position:absolute;left:25vw;" id="navigationBarTitle" >Find a Safe Path</a>
+      </div>
+  </div>
+  <div class="navBar card-block" style="text-align: center">
+      <a href="/index" id="navigationBar hover" style="color:white; align: center">Home</a>
+      <a href="javascript:history.back()" style="color:white; float: left; padding-left: 10%">Back</a>
+      <a href="/" style="color:white; float: right; padding-right: 10%">Logout</a>
+  </div>
 <!--place holder--> 
   <form action="/safePath" method="post">
     <div class="form-group centered">
-        <img src="images/A_Point.png" height="26" width="16">
+        <img src="images/A_Point.png" max-height="26" height="22vw" width="15vw" max-width="22">
         <input required id="origin-input" class="controls"  type="text" name="start" value="{{start}}" placeholder="enter an origin location">
       <!--<button  id="reset-button-start" onclick="clearTextStart()">x</button>-->
     </div>
     <div class="form-group centered">
-        <img src="images/B_Point.png" height="26" width="22" style="margin:0 0 5px 0;">
+        <img src="images/B_Point.png" max-height="26" height="22vw" width="22vw" max-width="25">
         <input required id="destination-input" class="controls"  type="text" name="destination" value="{{destination}}" placeholder="enter a destination location">
       <!--<button  id="reset-button-dest" onclick="clearTextDest()">x</button>-->
     </div>
@@ -56,8 +43,6 @@
     <div class="form-group centered">
       <div class="col-sm-offset-2 col-sm-10">
         <button class="btn btn-primary" style="margin:-5px 10vw 0 62vw; height:30px; width:90px; font-size:16px; font-family:Century Gothic;" type="submit">Search</button>
-        <br><br><br>
-
       </div>
     </div>
   </form>
