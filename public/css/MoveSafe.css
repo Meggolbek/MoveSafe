@@ -1,3 +1,15 @@
+#pathInfo {
+    position: relative;
+    display: inline-block;
+    width : 90vw;
+    height:8vh;
+    background-color:#008ae6; 
+    font-family:Century Gothic;
+    font-size:15px;
+    color : white;
+}
+
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -8,7 +20,8 @@
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    width: 120vw;
+    height:27vh;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
@@ -106,7 +119,7 @@ body {margin:0;}
 /* Always set the map height explicitly to define the size of the div element that contains the map. */
 /*Maps API https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-directions */
       #map {
-        height: 50%;
+        height: 65%;
         width: 90%;
         margin: 0 auto 0 auto;
       }

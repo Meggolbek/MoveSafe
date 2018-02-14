@@ -21,7 +21,12 @@ var map;
          });
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 13,
-          center: {lat: 32.879736, lng: -117.235934}
+          center: {lat: 32.879736, lng: -117.235934},
+                    mapTypeControl: true,
+          mapTypeControlOptions: {
+              style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+              position: google.maps.ControlPosition.LEFT_BOTTOM,
+          }
         });
 
 
