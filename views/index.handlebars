@@ -27,31 +27,51 @@
       <a href="javascript:history.back()" style="color:white; float: left; padding-left: 10%">Back</a>
       <a href="/" style="color:white; float: right; padding-right: 10%">Logout</a>
   </div>
+
 <!--place holder--> 
+<div class="cardboard" style="position:relative;top:-1vh" padding="10px">
   <form action="/safePath" method="post">
-    <div class="form-group centered">
-        <img src="images/A_Point.png" max-height="26" height="22vw" width="15vw" max-width="22">
-        <input required id="origin-input" class="controls"  type="text" name="start" value="{{start}}" placeholder="enter an origin location">
-      <!--<button  id="reset-button-start" onclick="clearTextStart()">x</button>-->
+    <div class="form-group centered" style="position:relative;top:2vh">
+        <img src="images/A_Point.png" height="22" width="15">
+        <input required id="origin-input" class="controls"  type="text" name="start" value="{{start}}" style :placeholder="enter an origin location">
     </div>
-    <div class="form-group centered">
-        <img src="images/B_Point.png" max-height="26" height="22vw" width="22vw" max-width="25">
+    <div class="form-group centered" style="position:relative;top:0vh">
+        <img src="images/B_Point.png" height="22" width="20" style="margin:0 0 5px 0;">
         <input required id="destination-input" class="controls"  type="text" name="destination" value="{{destination}}" placeholder="enter a destination location">
       <!--<button  id="reset-button-dest" onclick="clearTextDest()">x</button>-->
     </div>
-    <br>
-    <div class="form-group centered">
+    <div class="form-group centered" style="position:relative;top:0vh">
       <div class="col-sm-offset-2 col-sm-10">
-        <button class="btn btn-primary" style="margin:-5px 10vw 0 62vw; height:30px; width:90px; font-size:16px; font-family:Century Gothic;" type="submit">Search</button>
+        <button class="btn btn-primary" style="margin:-5px 10vw 0 61vw; height:22px; width:90px; font-size:14px; line-height:2px; font-family:Century Gothic;" type="submit">Search</button>
+        <br><br>
       </div>
     </div>
   </form>
-    <div align="center" >
-        <div style="width: 60vw; max-width:500px; border: solid">
-            <p>Safety Tip:</p>
-            <p>{{tip}}</p>
+</div>
+</div>
+
+<div class="cardboard" style="position:relative;top:-1vh" padding="10px">
+<div class="col-md-6 main-div mx-auto" >
+    <div class="card" style="margin:30px 0 0 0;">
+        <div class="card-block" style="width: 91vw";>
+            <div class="card-header" style="font-family:Century Gothic; ">
+                <h3 style="margin:0 0 0 40px">Safety tip of the day</h3>
+            </div>
         </div>
     </div>
+</div>
+    <div>
+        <div style="width: 60vw; max-width:500px;">
+          <div class="row">
+<div class="col-6 col-md-4" >
+            <p style="font-family: Brush Script MT, Brush Script Std, cursive; font-style: italic;font-size:3vh;position: relative;right:-20vw;top:3vh">{{tip}}</p>
+          </div>
+            <div class="col-6 col-md-4" >
+              <img src="images/gale_Henry.jpg" height="150" width="110" style="position: relative;right:-25vw;top:1vh">
+            </div>
+        </div>
+    </div>
+  </div>
 <script src="/js/MoveSafe.js"></script>
 <!--<script src="/routes/SafePath.js"></script>-->
   </body>
