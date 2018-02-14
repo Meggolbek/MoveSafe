@@ -15,6 +15,7 @@ var safePath = require('./routes/SafePath');
 var routing = require('./routes/Routing');
 var arrival = require('./routes/Arrival');
 var login = require('./routes/login');
+var signUp = require('./routes/signUp');
 
 
 // Example route
@@ -62,7 +63,7 @@ app.post('/safePath', safePath.view);
 app.get('/routing/:start/:destination', routing.view);
 app.get('/arrival', arrival.view);
 app.get('/', login.view);
-
+app.get('/signUp',signUp.view);
 
 
 // Example route
