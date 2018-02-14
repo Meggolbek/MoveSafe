@@ -27,18 +27,11 @@
 <body>
 
 
-<!--<div class="topnav">-->
-    <!--<a href="javascript:history.back()" id="navigationBar">Back</a>-->
-    <!--<a href="/" id="navigationBar">Home</a>-->
-    <!--<a padding="100px" id="navigationBarTitle" style="position:absolute;right:0;font-weight:bold; font-family:Century Gothic" >Find a safe path</a>-->
-<!--</div>-->
-<div>
-    <a style="color: black;" href="javascript:history.back()"><i style="font-size: 20px; position:absolute; left:10px" class="fas fa-angle-left"></i></a>
-    <a href="/" style="color: black"><i class="fas fa-home" style="font-size: 20px; position:absolute; right:10px"></i></a>
-    <h3 align="center">Find A Safe Path</h3>
+<div class="topnav card-block">
+  <a href="/" id="navigationBar hover"><img src="images/home.png" height="20" width="20" style="position:absolute;right:18px;top:18px" ></a>
+    <a href="/" id="navigationBar hover"><img src="images/Back.png"height="20" width="20" style="position:absolute;left:11px;top:18px"></a>
+  <a style="position:absolute;left:25vw;" id="navigationBarTitle" >Find a safe path</a>
 </div>
-
-
 <!--<div class="card text-center ml-5 form-group centered" style="float: left; display: inline-block; width: 75vw; height: 10vh;">-->
     <!--<form action="/safePath" method="post">-->
         <!--<div class="form-group centered">-->
@@ -51,31 +44,41 @@
     <!--</form>-->
 <!--</div>-->
 <!--place holder--> 
-  <form action="/safePath" method = "post">
-    <div class="form-group centered">
-      <img src="images/A_Point.png" height="18" width="15">
-      <input required id="origin-input" class="controls"  type="text" value= "{{start}}" name="start" placeholder="enter an origin location">
-      <!--<button  id="reset-button-start" onclick="clearTextStart()">x</button>-->
-    </div>
-    <div class="form-group centered">
-      <img src="images/B_Point.png" height="18" width="20">
-      <input required id="destination-input" class="controls"  type="text" value="{{destination}}" name="destination" placeholder="enter a destination location">
-      <!--<button  id="reset-button-dest" onclick="clearTextDest()">x</button>-->
-    </div>
+<div class="dropdown" style="background-color:#ebf0fa; position:absolute; left:5vw; font-family:Century Gothic;font-size:15px">
+    <p display="inline;" style="position:relative;left:15vw;top:6px" width="90vw" ><img src="images/search-black.png" height="15" width="15" style="position:relative;left:-10vw;top:-1px" >
+        Search for a new place
+    </p>
+    <div class="dropdown-content">
     <br>
-    <div class="form-group centered">
-      <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit">new search</button>
-      </div>
-    </div>
+    <form action="/safePath" method = "post">
+        <div class="form-group centered">
+            <img src="images/A_Point.png" height="18" width="15">
+            <input required id="origin-input" class="controls"  type="text" value= "{{start}}" name="start" placeholder="enter an origin location">
+      <!--<button  id="reset-button-start" onclick="clearTextStart()">x</button>-->
+        </div>
+        <div class="form-group centered">
+            <img src="images/B_Point.png" height="18" width="20">
+            <input required id="destination-input" class="controls"  type="text" value="{{destination}}" name="destination" placeholder="enter a destination location">
+      <!--<button  id="reset-button-dest" onclick="clearTextDest()">x</button>-->
+        </div>
+        <div class="form-group centered">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button class="btn btn-primary" style="margin:-10px 0 0 217px; height:30px; line-height:10px;font-size:18px font-family:Century Gothic;" type="submit">Search</button>
+            </div>
+        </div>
   </form>
+  </div>
+</div>
+
+<br><br><br>
 
 <!--map-->
-    <div id="map"></div>
+    <div width="80vw" id="map"></div>
     &nbsp;
 
 <!--information of path-->
-    <div style="margin-top: 5px" class="footer">
+<div class="card-board">
+    <div style="margin-top: 2px" class="footer">
         <table style="margin-top: 10px" align="center">
             <tr>
                 <td style="border: solid"><div>
@@ -91,6 +94,7 @@
             </tr>
         </table>
     </div>
+</div>
 
 
 
