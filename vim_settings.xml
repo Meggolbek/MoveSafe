@@ -1,0 +1,101 @@
+<application>
+  <component name="VimSettings">
+    <state version="4" enabled="true" />
+    <globalmarks />
+    <filemarks>
+      <file name="$USER_HOME$/lab5/app.js" timestamp="1518072522191">
+        <mark key="[" line="10" column="37" />
+      </file>
+      <file name="/Dummy.txt" timestamp="1518076420655">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/MoveSafe/routes/SafePath.js" timestamp="1518301254542">
+        <mark key="[" line="0" column="4" />
+        <mark key="]" line="0" column="4" />
+        <mark key="." line="0" column="4" />
+      </file>
+      <file name="$USER_HOME$/lab5/routes/index.js" timestamp="1518069194342">
+        <mark key="[" line="5" column="22" />
+      </file>
+      <file name="$USER_HOME$/lab5/routes/add.js" timestamp="1518075925945">
+        <mark key="[" line="8" column="17" />
+        <mark key="]" line="15" column="17" />
+        <mark key="." line="15" column="17" />
+      </file>
+      <file name="$USER_HOME$/lab5/views/index.handlebars" timestamp="1518070270621">
+        <mark key="'" line="15" column="0" />
+        <mark key="[" line="20" column="29" />
+        <mark key="]" line="20" column="29" />
+        <mark key="." line="20" column="29" />
+      </file>
+      <file name="$USER_HOME$/lab5/public/js/hci-friends.js" timestamp="1518071336549">
+        <mark key="[" line="49" column="10" />
+        <mark key="]" line="49" column="10" />
+        <mark key="." line="49" column="10" />
+      </file>
+      <file name="$USER_HOME$/MoveSafe/views/safePath.handlebars" timestamp="1518301318456">
+        <mark key="[" line="10" column="86" />
+        <mark key="]" line="10" column="86" />
+        <mark key="." line="10" column="86" />
+        <mark key="^" line="15" column="29" />
+      </file>
+      <file name="$USER_HOME$/MoveSafe/public/js/API_Path.js" timestamp="1518301188308">
+        <mark key="[" line="9" column="18" />
+      </file>
+    </filemarks>
+    <jumps />
+    <registers>
+      <register name="1" type="4">
+        <text encoding="base64">CiAgICBkYXRhLmZyaWVuZHMuYWRkRnJpZW5kKCk=</text>
+      </register>
+      <register name="&quot;" type="4">
+        <text encoding="base64">Pg==</text>
+      </register>
+      <register name="2" type="4">
+        <text encoding="base64">CnZhciBuYW1lID0gcmVxLnF1ZXJ5Lm5hbWU7CnZhciBkZXNjcmlwdGlvbiA9IHJlcS5xdWVyeS5kZXNjcmlwdGlvbjs=</text>
+      </register>
+      <register name="3" type="4">
+        <text encoding="base64">CiQoIi5mcmllbmRzIikuY2xpY2soY2xpY2tMaXN0ZW5lcik7</text>
+      </register>
+      <register name="4" type="4">
+        <text encoding="base64">ICAgIDxzY3JpcHQgc3JjPSJwdWJsaWMvanMvanF1ZXJ5LTEuMTEuMC5qcyI+PC9zY3JpcHQ+CiAgICA8c2NyaXB0IHNyYz0icHVibGljL2pzL2Jvb3RzdHJhcC5qcyI+PC9zY3JpcHQ+CiAgICA8c2NyaXB0IHNyYz0icHVibGljL2pzL2hjaS1mcmllbmRzLmpzIj48L3NjcmlwdD4=</text>
+      </register>
+      <register name="-" type="4">
+        <text encoding="base64">Pg==</text>
+      </register>
+    </registers>
+    <search>
+      <last-dir>0</last-dir>
+      <show-last>false</show-last>
+    </search>
+    <history>
+      <history-search />
+      <history-cmd />
+      <history-expr />
+      <history-input />
+    </history>
+    <shortcut-conflicts>
+      <shortcut-conflict owner="ide">
+        <text>ctrl pressed C</text>
+      </shortcut-conflict>
+      <shortcut-conflict owner="ide">
+        <text>ctrl pressed V</text>
+      </shortcut-conflict>
+      <shortcut-conflict owner="ide">
+        <text>ctrl pressed S</text>
+      </shortcut-conflict>
+      <shortcut-conflict owner="ide">
+        <text>ctrl pressed X</text>
+      </shortcut-conflict>
+      <shortcut-conflict owner="ide">
+        <text>ctrl pressed Y</text>
+      </shortcut-conflict>
+      <shortcut-conflict owner="vim">
+        <text>ctrl pressed R</text>
+      </shortcut-conflict>
+      <shortcut-conflict owner="vim">
+        <text>ctrl pressed F</text>
+      </shortcut-conflict>
+    </shortcut-conflicts>
+  </component>
+</application>
