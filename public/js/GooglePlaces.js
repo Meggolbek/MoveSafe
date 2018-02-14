@@ -8,4 +8,4 @@ function initialize() {
 
     var inputDest = document.getElementById('destination-input');
     var autocompleteDest = new google.maps.places.Autocomplete(inputDest);
-}z
+}
