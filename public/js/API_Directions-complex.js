@@ -23,12 +23,9 @@ var map;
           zoom: 13,
           center: {lat: 32.879736, lng: -117.235934},
                     mapTypeControl: true,
-          mapTypeControlOptions: {
-              style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-              position: google.maps.ControlPosition.LEFT_BOTTOM,
-          }
+          mapTypeControlOptions: false,
+          disableDefaultUI: true
         });
-
 
         // Create a renderer for directions and bind it to the map.
         var directionsDisplay = new google.maps.DirectionsRenderer({map: map});
