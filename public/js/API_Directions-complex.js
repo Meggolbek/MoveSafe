@@ -43,9 +43,6 @@ var map;
         var onChangeHandler = function() {
           calculateAndDisplayRoute();
         };
-        document.getElementById('origin-input').addEventListener('change', onChangeHandler);
-        document.getElementById('destination-input').addEventListener('change', onChangeHandler);
-
 
 
          console.log("about to load geoJson file!");
