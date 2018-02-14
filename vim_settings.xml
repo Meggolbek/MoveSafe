@@ -9,6 +9,11 @@
       <file name="/Dummy.txt" timestamp="1518076420655">
         <mark key="[" line="0" column="0" />
       </file>
+      <file name="$USER_HOME$/MoveSafe/routes/signUp.js" timestamp="1518634113686">
+        <mark key="[" line="4" column="4" />
+        <mark key="]" line="4" column="4" />
+        <mark key="." line="4" column="4" />
+      </file>
       <file name="$USER_HOME$/MoveSafe/routes/SafePath.js" timestamp="1518301254542">
         <mark key="[" line="0" column="4" />
         <mark key="]" line="0" column="4" />
@@ -49,7 +54,7 @@
         <text encoding="base64">CiAgICBkYXRhLmZyaWVuZHMuYWRkRnJpZW5kKCk=</text>
       </register>
       <register name="&quot;" type="4">
-        <text encoding="base64">Pg==</text>
+        <text>r</text>
       </register>
       <register name="2" type="4">
         <text encoding="base64">CnZhciBuYW1lID0gcmVxLnF1ZXJ5Lm5hbWU7CnZhciBkZXNjcmlwdGlvbiA9IHJlcS5xdWVyeS5kZXNjcmlwdGlvbjs=</text>
@@ -61,7 +66,7 @@
         <text encoding="base64">ICAgIDxzY3JpcHQgc3JjPSJwdWJsaWMvanMvanF1ZXJ5LTEuMTEuMC5qcyI+PC9zY3JpcHQ+CiAgICA8c2NyaXB0IHNyYz0icHVibGljL2pzL2Jvb3RzdHJhcC5qcyI+PC9zY3JpcHQ+CiAgICA8c2NyaXB0IHNyYz0icHVibGljL2pzL2hjaS1mcmllbmRzLmpzIj48L3NjcmlwdD4=</text>
       </register>
       <register name="-" type="4">
-        <text encoding="base64">Pg==</text>
+        <text>r</text>
       </register>
     </registers>
     <search>
