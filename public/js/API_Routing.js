@@ -17,8 +17,8 @@
       }
 
       function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-        var start = document.getElementById('origin-input').value;
-        var end = document.getElementById('destination-input').value;
+        var start = document.getElementById('origin-input-route').value;
+        var end = document.getElementById('destination-input-route').value;
         directionsService.route({
           origin: start,
           destination: end,
