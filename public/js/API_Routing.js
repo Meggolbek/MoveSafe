@@ -7,7 +7,6 @@
         // });
         // directionsDisplay.setMap(map);
         directionsDisplay.setPanel(document.getElementById('right-panel'));
-        console.log("les citrons sont jaunes Geneviève")
 
         // var control = document.getElementById('floating-panel');
         // control.style.display = 'block';
@@ -22,8 +21,10 @@
         directionsService.route({
           origin: start,
           destination: end,
-          travelMode: 'WALKING'
+          travelMode: 'WALKING',
+          provideRouteAlternatives: true,
         }, function(response, status) {
+            console.log(response);
           if (status === 'OK') {
             directionsDisplay.setDirections(response);
           } else {
