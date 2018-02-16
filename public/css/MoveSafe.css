@@ -213,11 +213,10 @@ body {margin:0;}
 
 .logIn label{
     font-weight:bold; 
-    font-size:5vh; 
+    font-size:20px;
 }
 
 .logIn input{
-    font-size:30px; 
-    padding: 5px 5px 5px 5px; 
-    height: 43px;
+    font-size:20px;
+    padding: 5px 5px 5px 5px;
 }
