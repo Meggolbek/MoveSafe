@@ -90,7 +90,13 @@ var map;
             if (status == google.maps.DirectionsStatus.OK) {
                 if(renderer.getRouteIndex()==undefined){
                     renderer.setRouteIndex(0);
-                    $("#ETA").text("ETA: " + response.routes[0].legs[0].duration.text);
+                    var ETA = response.routes[0].legs[0].duration.text;
+                    var num = ETA.charCodeAt(0);
+                    console.log(num);
+                    var safetyLevel = (num % 5) + 1;
+                    console.log(safetyLevel);
+                    $("#safetyLevel").text("Safety Level: " + safetyLevel);
+                    $("#ETA").text("ETA: " + ETA);
                 };
                 renderer.setDirections(response);
                 renderer.setMap(map);
@@ -153,7 +159,11 @@ function renderDirectionsPolylines(response) {
 function attachListener(num, stepPolyline, response) {
     return google.maps.event.addListener(stepPolyline, 'click', function (evt) {
         renderer.setRouteIndex(num);
-        $("#ETA").text("ETA: " + response.routes[renderer.getRouteIndex()].legs[0].duration.text);
+        var ETA = response.routes[num].legs[0].duration.text;
+        var number = ETA.charCodeAt(0);
+        safetyLevel = (number % 5) + 1;
+        $("#safetyLevel").text("Safety Level: " + safetyLevel);
+        $("#ETA").text("ETA: " + ETA);
         renderDirectionsPolylines(response);
         })
 }
