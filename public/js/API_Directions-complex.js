@@ -21,6 +21,7 @@ var map;
           zoom: 13,
           center: {lat: 32.879736, lng: -117.235934},
                     mapTypeControl: true,
+        //geting rid off the legend
           mapTypeControlOptions: false,
           disableDefaultUI: true
 
@@ -157,12 +158,19 @@ function attachListener(num, stepPolyline, response) {
         renderDirectionsPolylines(response);
         })
 }
-      function attachInstructionText(stepDisplay, marker, text, map) {
-        google.maps.event.addListener(marker, 'click', function() {
-          // Open an info window when the marker is clicked on, containing the text
-          // of the step.
-          stepDisplay.setContent(text);
-          stepDisplay.open(map, marker);
-        });
-      }
+
+function attachInstructionText(stepDisplay, marker, text, map) {
+    google.maps.event.addListener(marker, 'click', function() {
+    // Open an info window when the marker is clicked on, containing the text
+    // of the step.
+    stepDisplay.setContent(text);
+    stepDisplay.open(map, marker);
+    });
+}
+
+function selectedRouting(stepPolyline){
+    console.log(renderer.getRouteIndex());
+    return renderer.getRouteIndex();
+}
+
 google.maps.event.addDomListener(window, 'load', initMap);
