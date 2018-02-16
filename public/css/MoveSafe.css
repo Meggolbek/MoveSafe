@@ -81,32 +81,36 @@ font-size:12px
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #212032;
-    height: 55px;
+    height: 10vh;
     overflow: hidden;
+    text-align: center;
+    line-height:10vh;
 }
 
 .navBar {
     background-color: #3FBBBF;
+    text-align: center;
+    height: 8%;
+    padding-top:-3vh;
+
 }
 
+.navBar a{
+    color:white;
+    font-size: 3vh;
+    
+}
 /* Style the links inside the navigation bar */
 #navigationBar {
-    float: left;
     color: #e6e6ff;
-    text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
-    font-family:Century Gothic
+    font-family:Century Gothic;
 }
 
 #navigationBarTitle {
-    float: left;
     color: white;
-    text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 4vh;
 }
 
 /*!* Change the color of links on hover *!*/
@@ -119,7 +123,6 @@ font-size:12px
 #navigationBar-active {
     float: left;
     text-align: center;
-    padding: 14px 23px;
     text-decoration: none;
     font-size: 17px;
     font-family:Century Gothic;
@@ -206,3 +209,15 @@ body {margin:0;}
         font-size: 13px;
         font-weight: 300;
       }
+
+
+.logIn label{
+    font-weight:bold; 
+    font-size:5vh; 
+}
+
+.logIn input{
+    font-size:30px; 
+    padding: 5px 5px 5px 5px; 
+    height: 43px;
+}

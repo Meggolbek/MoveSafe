@@ -24,16 +24,22 @@
 
 <body>
 
-<div class="topnav card-block">
-    <div>
-        <a style="position:absolute;left:25vw;" id="navigationBarTitle" >Find a Safe Path</a>
-    </div>
-</div>
-<div class="navBar card-block" style="text-align: center">
-    <a href="/index" id="navigationBar hover" style="color:white; align: center">Home</a>
-    <a href="javascript:history.back()" style="color:white; float: left; padding-left: 10%">Back</a>
-    <a href="/" style="color:white; float: right; padding-right: 10%">Logout</a>
-</div>
+
+  <div class="topnav card-block">
+      <div>
+          <a id="navigationBarTitle" >Find a Safe Path</a>
+      </div>
+  </div>
+
+
+  <div class="navBar card-block">
+      <a href="/index" id="navigationBar hover">Home</a>
+      <a href="javascript:history.back()" style="float: left; padding-left: 10%">Back</a>
+      <a href="/" style="float: right; padding-right: 10%">Logout</a>
+  </div>
+
+
+
 
 <!--place holder--> 
 <div class="dropdown" style="background-color:#ebf0fa; position:absolute; left:5vw; font-family:Century Gothic;font-size:15px">
@@ -51,7 +57,7 @@
         <div class="form-group centered" style="position:absolute; top:10vh; left:12vw;">
             <img src="images/B_Point.png" height="18" width="20">
             <input required id="destination-input" class="controls"  type="text" value="{{destination}}" name="destination" placeholder="enter a destination location" style="font-size:12px;width:69vw">
-      <button  id="reset-button-dest" onclick="clearTextDest()">x</button>
+      <button id="reset-button-dest" onclick="clearTextDest()">x</button>
         </div>
 
         <div class="form-group centered" style="position:absolute; top:17vh;">
@@ -100,9 +106,11 @@
         document.getElementById("destination-input").value = "{{destination}}";
     });
 </script>
+
 <script>
 function clearTextStart(){document.getElementById("origin-input").value='';};
 function clearTextDest(){document.getElementById("destination-input").value='';}
 </script>
+
 </body>
 </html>
