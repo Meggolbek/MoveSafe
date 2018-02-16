@@ -57,7 +57,7 @@
         <div class="form-group centered" style="position:absolute; top:10vh; left:12vw;">
             <img src="images/B_Point.png" height="18" width="20">
             <input required id="destination-input" class="controls"  type="text" value="{{destination}}" name="destination" placeholder="enter a destination location" style="font-size:12px;width:69vw">
-      <button  id="reset-button-dest" onclick="clearTextDest()">x</button>
+      <button id="reset-button-dest" onclick="clearTextDest()">x</button>
         </div>
 
         <div class="form-group centered" style="position:absolute; top:17vh;">
@@ -106,9 +106,11 @@
         document.getElementById("destination-input").value = "{{destination}}";
     });
 </script>
+
 <script>
 function clearTextStart(){document.getElementById("origin-input").value='';};
 function clearTextDest(){document.getElementById("destination-input").value='';}
 </script>
+
 </body>
 </html>
