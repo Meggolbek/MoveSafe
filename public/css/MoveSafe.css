@@ -124,69 +124,76 @@ body {margin:0;}
 
 /* Always set the map height explicitly to define the size of the div element that contains the map. */
 /*Maps API https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-directions */
-  #map {
-    height: 95%;
-    width: 90%;
-    margin: 0 auto 0 auto;
-  }
 
-  /* Optional: Makes the sample page fill the window. */
-  html, body {
-    height: 100vw;
-    margin: 0;
-    padding: 0;
-  }
-  .controls {
-    margin-top: 10px;
-    border: 1px solid transparent;
-    border-radius: 2px 0 0 2px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    height: 32px;
-    width: 80vw;
-    max-width: 250px;
-    outline: none;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  }
+      #map {
+        height: 95%;
+        width: 90%;
+        margin: 0 auto 0 auto;
+      }
 
-  #origin-input,
-  #destination-input {
+
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100vw;
+        margin: 0;
+        padding: 0;
+      }
+      .controls {
+        margin-top: 10px;
+        border: 1px solid;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px;
+        width: 80vw;
+        max-width: 250px;
+        outline: none;
+      }
+
+      #origin-input,
+      #destination-input {
+        background-color: #fff;
+        font-family: Century Gothic;
+        font-size: 13px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+      }
+
+      #origin-input:focus,
+      #destination-input:focus {
+        border-color: #4d90fe;
+      }
+#origin-input-path,
+#destination-input-path {
     background-color: #fff;
     font-family: Century Gothic;
-    font-size: 13px;
+    font-size: 20px;
     font-weight: 300;
     margin-left: 12px;
     padding: 0 11px 0 13px;
     text-overflow: ellipsis;
-  }
 
-  #origin-input:focus,
-  #destination-input:focus {
+    height: 40px;
+    width: 80vw;
+    max-width: 280px;
+}
+
+#origin-input-path:focus,
+#destination-input-path:focus {
     border-color: #4d90fe;
-  }
+}
 
-  #mode-selector {
-    color: #fff;
-    background-color: #4d90fe;
-    margin-left: 12px;
-    padding: 5px 11px 0px 11px;
-  }
+      #mode-selector {
+        color: #fff;
+        background-color: #4d90fe;
+        margin-left: 12px;
+        padding: 5px 11px 0px 11px;
+      }
 
-  #mode-selector label {
-    font-family: Roboto;
-    font-size: 13px;
-    font-weight: 300;
-  }
-
-
-
-
-  /*for the login screen*/
-
-
-
-
-
-
-
-
+      #mode-selector label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
