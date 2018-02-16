@@ -60,23 +60,36 @@
   </form>
   </div>
 </div>
-
-<div class="card-board centered" id="pathInfo" style="position:relative; left:5vw; top:10vh;">
-    <div class="row" style="position:relative;top:6px;font-weight: bold;font-size:14px">
+<div align="center" >
+    <table border="solid" style="font-size: 12px; position: relative; top:10vh">
+        <tr>
+            <td><h6>Safe</h6></td>
+            <td width="12%" style="background-color: rgba(0,153,51,0.4)"></td>
+            <td width="12%" style="background-color: rgba(153,255,51, 0.4)"></td>
+            <td width="12%" style="background-color: rgba(255,255,0, 0.4)"></td>
+            <td width="12%" style="background-color: rgba(255,153,0, 0.4)"></td>
+            <td width="12%" style="background-color: rgba(255,0,0, 0.4)"></td>
+            <td><h6>Unsafe</h6></td>
+        </tr>
+    </table>
+</div>
+<div class="card-board centered" id="infoBar" class="pathInfo" style="position:relative; left:5vw; top:13vh;">
+    <div class="row" style="position:relative;top:2vh;font-weight: bold;font-size:14px">
         <p id="safetyLevel" class="col-6 col-md-4" style="position:relative;left:12px;">Safety Level: 1</p>
         <p id="ETA" class="col-6 col-md-4" style="position:relative;right:12px">ETA: 2 min</p>
     </div>
 </div>
 <!--map-->
-    <div style="position:relative; top:13vw;" width="80vw" id="map"></div>
+    <div style="position:relative; top:13vh;" width="80vw" id="map"></div>
     <div id="panel"></div>
 
 <!--information of path-->
-    <a href="/routing/{{start}}/{{destination}}"><button id="pathInfo" style="position:relative; background-color:#0099ff; top:7vh; left:5vw; width:90vw;height:6vh;font-size:14px">Start</button></a>
+    <a href="/routing/{{start}}/{{destination}}">
+        <button class="pathInfo" style="position:relative; background-color:#0099ff; top:8vh; left:5vw; width:90vw;height:6vh;font-size:14px">Start</button></a>
 </div>
 
 <br><br><br>
-<div style="position:relative;top:-1vh">
+<div style="position:relative;bottom:-1vh">
 <p style="font-size: 8px; position:relative;right:-47vw"><img style="height:15px"src="http://www.pvhc.net/img8/lazfyirwsgqitzoqosou.jpg">neighborhood data was provided by Zillow</p>
 </div>
 

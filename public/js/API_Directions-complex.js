@@ -103,8 +103,11 @@ var map;
                 //renderer.setPanel(panel);
                 renderDirectionsPolylines(response);
             } else {
-                renderer.setMap(null);
-                renderer.setPanel(null);
+                $(".pathInfo").hide();
+                $("#safetyLevel").hide();
+                $("#ETA").hide();
+                $("#map").text("Please press Search for a new place and enter in a valid place or address");
+                $("#zillowDiv").hide();
             }
         });
       }
