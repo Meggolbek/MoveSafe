@@ -60,9 +60,9 @@ var map;
          // var color = type == 0 ? '#f00' : '#0f0';
          var color;
          if(type == 0) {
-             color = '#009933';
+             color = '#0415f9';
          } else if (type == 1) {
-             color = '#99ff33';
+             color = '#009933';
          } else if (type == 2) {
              color = '#ffff00';
          } else if (type == 3) {
