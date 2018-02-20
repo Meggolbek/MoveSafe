@@ -1,22 +1,13 @@
-.pathInfo {
-    position: relative;
-    display: inline-block;
-    width : 90vw;
-    height:8vh;
-    background-color:#008ae6; 
-    font-family:Century Gothic;
-    font-size:15px;
-    color : white;
-}
+
 #infoBar {
     position: relative;
     display: inline-block;
     width : 90vw;
     height:8vh;
-    background-color:#008ae6;
+    background-color:#ebf0fa;
     font-family:Century Gothic;
-    font-size:15px;
-    color : white;
+    font-size:2.5vh;
+    color : black;
 }
 
 .dropdown {
@@ -80,7 +71,7 @@ font-size:12px
 
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #212032;
+    background-color: #02184B;
     height: 10vh;
     overflow: hidden;
     text-align: center;
@@ -88,18 +79,30 @@ font-size:12px
 }
 
 .navBar {
-    background-color: #3FBBBF;
+    background-color: #7182A9;
     text-align: center;
-    height: 8%;
+    height: 12%;
     padding-top:-3vh;
 
 }
 
 .navBar a{
     color:white;
-    font-size: 3vh;
-    
+    font-size: 3.5vh;
+    line-height: -2vh;
+    text-underline-position: under;
 }
+
+
+.navbar .divider-vertical {
+height: 40px;
+margin: 0 9px;
+border-left: 1px solid #f2f2f2;
+border-right: 1px solid #ffffff;
+}
+
+
+
 /* Style the links inside the navigation bar */
 #navigationBar {
     color: #e6e6ff;
@@ -137,46 +140,46 @@ body {margin:0;}
 /* Always set the map height explicitly to define the size of the div element that contains the map. */
 /*Maps API https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-directions */
 
-      #map {
-        height: 95%;
-        width: 90%;
-        margin: 0 auto 0 auto;
-      }
+#map {
+    height: 85%;
+    width: 90%;
+    margin: 0 auto 0 auto;
+    }
 
 
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100vw;
-        margin: 0;
-        padding: 0;
-      }
-      .controls {
-        margin-top: 10px;
-        border: 1px solid;
-        border-radius: 2px 0 0 2px;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        height: 32px;
-        width: 80vw;
-        max-width: 250px;
-        outline: none;
-      }
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100vw;
+    margin: 0;
+    padding: 0;
+}
+.controls {
+    margin-top: 10px;
+    border: 1px solid;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    width: 80vw;
+    max-width: 250px;
+    outline: none;
+}
 
-      #origin-input,
-      #destination-input {
-        background-color: #fff;
-        font-family: Century Gothic;
-        font-size: 13px;
-        font-weight: 300;
-        margin-left: 12px;
-        padding: 0 11px 0 13px;
-        text-overflow: ellipsis;
-      }
+#origin-input,
+#destination-input {
+    background-color: #fff;
+    font-family: Century Gothic;
+    font-size: 13px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+}
 
-      #origin-input:focus,
-      #destination-input:focus {
-        border-color: #4d90fe;
-      }
+#origin-input:focus,
+#destination-input:focus {
+    border-color: #4d90fe;
+}
 #origin-input-path,
 #destination-input-path {
     background-color: #fff;
@@ -197,18 +200,18 @@ body {margin:0;}
     border-color: #4d90fe;
 }
 
-      #mode-selector {
-        color: #fff;
-        background-color: #4d90fe;
-        margin-left: 12px;
-        padding: 5px 11px 0px 11px;
-      }
+#mode-selector {
+    color: #fff;
+    background-color: #4d90fe;
+    margin-left: 12px;
+    padding: 5px 11px 0px 11px;
+}
 
-      #mode-selector label {
-        font-family: Roboto;
-        font-size: 13px;
-        font-weight: 300;
-      }
+#mode-selector label {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+}
 
 
 .logIn label{
@@ -216,8 +219,61 @@ body {margin:0;}
     font-size:5vh; 
 }
 
+
+
 .logIn input{
     font-size:30px; 
     padding: 5px 5px 5px 5px; 
     height: 43px;
 }
+
+.search img {
+    height:6vh;
+    width:9vw;
+    margin:0 0 10px 0;
+}
+
+.search input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.bouton{
+    width: 30%;
+    height: 5vh;
+    font-size: 20px;
+    line-height: 3px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.safetyTips div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    max-width: 90%;
+}
+
+.safetyTips h1{
+    font-size:5vw;
+    font-family: Century Gothic; 
+}
+
+.safetyTips p{
+    font-family: Century Gothic; 
+    font-style: italic;
+    font-size:5vw;
+    padding: 15px 15px;
+}
+
+
+
+
+

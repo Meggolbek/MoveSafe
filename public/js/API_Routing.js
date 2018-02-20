@@ -1,4 +1,3 @@
-      
       function initMap() {
         var directionsDisplay = new google.maps.DirectionsRenderer;
         var directionsService = new google.maps.DirectionsService;
@@ -13,18 +12,16 @@
         // control.style.display = 'block';
         // map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
         calculateAndDisplayRoute(directionsService, directionsDisplay);
-      }
 
+      }
 
       function calculateAndDisplayRoute(directionsService, directionsDisplay) {
         var start = document.getElementById('origin-input-route').value;
         var end = document.getElementById('destination-input-route').value;
-        console.log(directionsDisplay.getRouteIndex());
-
         directionsService.route({
           origin: start,
           destination: end,
-          travelMode: 'WALKING',
+          travelMode: 'WALKING'
         }, function(response, status) {
           if (status === 'OK') {
             directionsDisplay.setDirections(response);

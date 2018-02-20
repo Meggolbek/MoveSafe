@@ -50,49 +50,50 @@
       <a href="/" style="float: right; padding-right: 10%">Logout</a>
   </div>
 
-
-
-
-
-
-
+<div align="center" class="cardboard safetyTips" style="position:relative;top:8vh;" >
+        <div class="card-block" style="border: 1px solid lightgray;
+    border-radius: 4px;" >
+            <div class="card-header">
+                <h1>Where do you want to go ?</h1>
+            </div>
+        </div>
+</div>
 <!--place holder--> 
-<div class="cardboard" style="position:relative;top:-1vh" padding="10px">
+<div class="cardboard search" style="position:relative;top:10vh" padding="10px">
   <form action="/safePath" method="post">
-    <div class="form-group centered" style="position:relative;top:2vh;margin-bottom: 20px">
-        <img src="images/A_Point.png" height="35" width="27" style="margin:0 0 10px 0;">
-        <input required id="origin-input-path" class="controls" type="text" name="start" value="{{start}}" placeholder="Enter a starting location">
+    <div class="centered" style="position:relative;top:2vh;margin-bottom: 20px">
+        <img src="images/A_Point.png" >
+        <input required id="origin-input-path" type="text" name="start" value="{{start}}" placeholder="enter a starting location...">
     </div>
     <div class="form-group centered" style="position:relative;top:0vh;margin-bottom: 20px">
-        <img src="images/B_Point.png" height="35" width="32" style="margin:0 0 10px 0;">
-        <input required id="destination-input-path" class="controls"  type="text" name="destination" value="{{destination}}" placeholder="Enter a destination">
+        <img src="images/B_Point.png">
+        <input required id="destination-input-path" type="text" name="destination" value="{{destination}}" placeholder="enter a destination...">
     </div>
-    <div class="form-group centered" style="position:relative;top:0vh">
-        <button class="btn btn-primary" style="height:40px; width:280px; font-size:20px; line-height:2px; font-family:Century Gothic; margin-left: 42px" type="submit">Search</button>
+
+    <div class="form-group" style="position:relative;left:60vw">
+        <button class="bouton btn-success" type="submit">Search</button>
     </div>
   </form>
 </div>
 </div>
-<br><br><br><br><br>
-<div align="center" class="cardboard" style="position:relative;top:-1vh" padding="10px">
-        <div class="card-block" style="width: 91vw";>
-            <div class="card-header" style="font-family:Century Gothic; ">
-                <h4>Safety tip of the day</h4>
+
+<div align="center" class="cardboard safetyTips" style="position:relative;top:15vh;" >
+        <div class="card-block"style="border: 1px solid lightgray;
+    border-radius: 4px;">
+            <div class="card-header" >
+                <h1>Safety tip of the day</h1>
             </div>
         </div>
 </div>
-  <div>
-      <div style="width: 60vw; max-width:500px;">
-          <div class="row">
-<div class="col-6 col-md-4" >
-            <p style="font-family: Century Gothic; font-style: italic;font-size:2vh;position: relative;right:-20vw;top:3vh">{{tip}}</p>
-          </div>
-            <div class="col-6 col-md-4" >
-              <img src="images/gale_Henry.jpg" height="150" width="110" style="position: relative;right:-25vw;top:1vh">
-            </div>
-        </div>
-    </div>
+
+<div class="safetyTips" style="position:relative; top:15vh;left:5vw">
+  <div style='background-color : white; border: 1px solid lightgray;
+    border-radius: 4px;'>
+      <p>{{tip}}</p>
   </div>
+</div>
+
+
 <script src="/js/MoveSafe.js"></script>
 <!--<script src="/routes/SafePath.js"></script>-->
   </body>
