@@ -21,8 +21,6 @@
     <div class="topnav card-block">
       <a padding="100px" id="navigationBarTitle" align="right">MoveSafe</a>
     </div>
-    <br>
-    <br>
 
 
     <!--<form action="/index">-->
@@ -43,30 +41,68 @@
         <!--&lt;!&ndash;<button type="submit" class="btn btn-primary text-center">Login</button>&ndash;&gt;-->
      <!--</form>   -->
      <!--<a href='/add' class="btn btn-primary text-center">Sign Up</a>-->
-    <div class="logIn">
-        <div class="form-group col-md-6">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted" style="font-size:15px; padding: 5px 5px 5px 5px;">We'll never share your email with anyone else.</small>
+    <div class="originalLogIn">
+        <br>
+        <br>
+        <div class="logIn">
+            <div class="form-group col-md-6">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted" style="font-size:15px; padding: 5px 5px 5px 5px;">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter password" style=" padding: 5px 5px 5px 5px;">
+                <small id="emailHelp" class="form-text text-muted" style="font-size:15px; padding: 5px 5px 5px 5px;">New user? Sign up below!</small>
+            </div>
         </div>
-        <div class="form-group col-md-6">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter password" style=" padding: 5px 5px 5px 5px;">
-            <small id="emailHelp" class="form-text text-muted" style="font-size:15px; padding: 5px 5px 5px 5px;">New user? Sign up below!</small>
-        </div>
+
+
+            <br>
+            <br>
+            <a href='/index'><button type="submit" class="btn btn-primary text-center" style="margin:10px 0px 0px 20px; width: 45vw; max-height:40px; max-width:150px; font-size: 20px;">Login</button></a>
+            <a href='/signup'><button type="submit" class="btn btn-primary text-center" style="margin:10px 0px 0px 20px; width: 45vw; max-height:40px; max-width:150px; font-size: 20px;">Sign Up</button></a>
+            <!--<button type="submit" class="btn btn-primary text-center">Login</button>-->
+        </form>
+        <br>
+        <br>
+        <br>
     </div>
 
 
+
+    <div class="facebookLogin">
+        <p style="font-size:20px; padding: 15px 5px 5px 25px; text-decoration:underline;">You can also log in through Facebook!</p>
+        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"style="padding-left: 38%;">
+        </fb:login-button>
+    </div>
+
+    <div class="FBLoggedInPlaceHolder">
+        <h1 class="FBsuccess centered" style="color:#007bff; font-style:italic; font-family: 'Apple Chancery';"></h1>
         <br>
-        <br>
-        <a href='/index'><button type="submit" class="btn btn-primary text-center" style="margin:10px 0px 0px 20px; width: 45vw; max-height:40px; max-width:150px; font-size: 20px;">Login</button></a>
-        <a href='/signup'><button type="submit" class="btn btn-primary text-center" style="margin:10px 0px 0px 20px; width: 45vw; max-height:40px; max-width:150px; font-size: 20px;">Sign Up</button></a>
-        <!--<button type="submit" class="btn btn-primary text-center">Login</button>-->
-    </form>
+
+        <p class="FBinsertname centered" style="font-size: 20px;"></p>
+        <img class="FBPhoto img-responsive" src="" />
+        <a href='/index' class="centered"></a>
+
+    </div>
+
+
+
+    <!--<div class="jumbotron">-->
+        <!--<h1>Scott Klemmer</h1>-->
+        <!--<p>human-computer interaction &middot; social computing &middot; crowdsourcing</p>-->
+        <!--<p class="facebookLogin">-->
+            <!--Please login through Facebook-->
+            <!--<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">-->
+            <!--</fb:login-button>-->
+        <!--</p>-->
+    <!--</div>-->
 
 
 
 
-
+    {{> facebook}}
+    <script src="/js/facebook.js"></script>
   </body>
 </html>
