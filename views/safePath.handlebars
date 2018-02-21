@@ -33,9 +33,9 @@
 
 
   <div class="navBar card-block">
-      <a href="/index" id="navigationBar hover">Home</a>
-      <a href="javascript:history.back()" style="float: left; padding-left: 10%">Back</a>
-      <a href="/" style="float: right; padding-right: 10%">Logout</a>
+    <a href="/index" id="navigationBar hover">Home</a>
+    <a href="javascript:history.back()" style="float: left; padding-left: 10%">Back</a>
+    <a href="/" style="float: right; padding-right: 10%">Logout</a>
   </div>
 
 
@@ -44,7 +44,7 @@
 <!--place holder--> 
 <div class="dropdown" style="background-color:#ebf0fa; position:absolute; left:5vw; font-family:Century Gothic;font-size:15px">
     <p display="inline;" style="position:relative;left:15vw;top:6px" width="90vw" ><img src="images/search-black.png" height="15" width="15" style="position:relative;left:-10vw;top:-1px" >
-        Search for a new place
+        Search for a new place...
     </p>
     <div class="dropdown-content" style="position:absolute;left:-12vw">
     <br>
@@ -66,39 +66,46 @@
   </form>
   </div>
 </div>
-<div align="center" >
-    <table border="solid" style="font-size: 12px; position: relative; top:10vh">
-        <tr>
-            <td><h6>Safe</h6></td>
-            <td width="12%" style="background-color: rgba(4, 21, 249,0.4)"></td>
-            <td width="12%" style="background-color: rgba(0,153,51, 0.4)"></td>
-            <td width="12%" style="background-color: rgba(255,255,0, 0.4)"></td>
-            <td width="12%" style="background-color: rgba(255,153,0, 0.4)"></td>
-            <td width="12%" style="background-color: rgba(255,0,0, 0.4)"></td>
-            <td><h6>Unsafe</h6></td>
-        </tr>
-    </table>
-</div>
-<div class="card-board centered" id="infoBar" class="pathInfo" style="position:relative; left:5vw; top:13vh;">
-    <div class="row" style="position:relative;top:2vh;font-weight: bold;font-size:14px">
+
+<div class="card-board centered" id="infoBar" class="pathInfo" style="position:relative; left:5vw; top:9vh; 
+    border-radius: 4px;
+">
+    <div class="row" style="position:relative;top:2vh;font-weight: bold;">
         <p id="safetyLevel" class="col-6 col-md-4" style="position:relative;left:12px;">Safety Level: 1</p>
         <p id="ETA" class="col-6 col-md-4" style="position:relative;right:12px">ETA: 2 min</p>
     </div>
 </div>
 <!--map-->
-    <div style="position:relative; top:13vh;" width="80vw" id="map"></div>
+    <div style="position:relative; top:9vh;" width="80vw" id="map"></div>
     <div id="panel"></div>
+    <div style="position:relative; top:10vh;" width="80vw">
+        <!--<p> Unsafe<img src="images/legend.png" height="30px">Safe</p>-->
+        <table id="mapLegend" align="center">
+            <tr style="font-size: 5vw" >
+                <td align="center">Safe</td>
+                <td width="12%" align="center" style="background-color: rgba(4, 21, 249,0.4)">1</td>
+                <td width="12%" align="center" style="background-color: rgba(0,153,51, 0.4)">2</td>
+                <td width="12%" align="center" style="background-color: rgba(255,255,0, 0.4)">3</td>
+                <td width="12%" align="center" style="background-color: rgba(255,153,0, 0.4)">4</td>
+                <td width="12%" align="center" style="background-color: rgba(255,0,0, 0.4)">5</td>
+                <td align="center">Unsafe</td>
+            </tr>
+        </table>
+    </div>
 
 <!--information of path-->
     <a href="/routing/{{start}}/{{destination}}">
-        <button class="pathInfo" style="position:relative; background-color:#0099ff; top:8vh; left:5vw; width:90vw;height:6vh;font-size:14px">Start</button></a>
+        <button class="bouton btn-success" style="position:relative; top:11vh; left:5vw; width:90vw;height:6vh;">Start</button></a>
+
 </div>
 
 <br><br><br>
 <div style="position:relative;bottom:-1vh">
-<p style="font-size: 8px; position:relative;right:-47vw"><img style="height:15px"src="http://www.pvhc.net/img8/lazfyirwsgqitzoqosou.jpg">neighborhood data was provided by Zillow</p>
+<p style="font-size: 8px; position:relative;right:-58vw; top:3vh;font-style: italic;" >neighborhood data was provided by <img style="height:15px"src="http://www.pvhc.net/img8/lazfyirwsgqitzoqosou.jpg"></p>
 </div>
 <params id="routeIndex" value="0"></params>
+
+
 <script src="https://code.jquery.com/jquery.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function(event) { 
