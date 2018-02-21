@@ -1,33 +1,58 @@
-.header{
-    text-align: center;
-    font-size: 5vw;
-    font-size: 5vh;
+
+#infoBar {
     position: relative;
-    top: 0;
-    font-family: "Century Gothic";
+    display: inline-block;
+    width : 90vw;
+    height:8vh;
+    background-color:#ebf0fa;
+    font-family:Century Gothic;
+    font-size:2.5vh;
+    color : black;
 }
 
-.header:after{
-    content:' ';
-    display:block;
-    border:1px solid black;
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width : 90vw;
 }
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 120vw;
+    height:27vh;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
 
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 .enterPlaces{
     width: 300px; 
     margin-right: 35px;
     border: 1px solid black; 
     background-color: #e5e5e5;
 }
+.footer:before{
+    content:' ';
+    display:block;
+    border:1px solid black;
+}
 
 #reset-button-start{
 font-family:Century Gothic; padding: 6px 10px;border-radius: 0;border: 1px solid lightgrey;
+font-size:12px
 }
 
-
+.gm-style-mtc {
+  display: none;
+}
 #reset-button-dest{
 font-family:Century Gothic; padding: 6px 10px;border-radius: 0;border: 1px solid lightgrey;
+font-size:12px
 }
 
 .controls origin-input{
@@ -46,33 +71,54 @@ font-family:Century Gothic; padding: 6px 10px;border-radius: 0;border: 1px solid
 
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #333;
+    background-color: #02184B;
+    height: 10vh;
     overflow: hidden;
+    text-align: center;
+    line-height:10vh;
 }
+
+.navBar {
+    background-color: #7182A9;
+    text-align: center;
+    height: 12%;
+    padding-top:-3vh;
+
+}
+
+.navBar a{
+    color:white;
+    font-size: 3.5vh;
+    line-height: -2vh;
+    text-underline-position: under;
+}
+
+
+.navbar .divider-vertical {
+height: 40px;
+margin: 0 9px;
+border-left: 1px solid #f2f2f2;
+border-right: 1px solid #ffffff;
+}
+
+
 
 /* Style the links inside the navigation bar */
 #navigationBar {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+    color: #e6e6ff;
     text-decoration: none;
-    font-size: 17px;
-    font-family:Century Gothic
+    font-family:Century Gothic;
 }
 
 #navigationBarTitle {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+    color: white;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 4vh;
 }
 
-/* Change the color of links on hover */
+/*!* Change the color of links on hover *!*/
 .topnav #navigationBar:hover {
-    background-color: #ddd;
+    background-color: #e6e6ff;
     color: black;
 }
 
@@ -80,11 +126,10 @@ font-family:Century Gothic; padding: 6px 10px;border-radius: 0;border: 1px solid
 #navigationBar-active {
     float: left;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
     font-family:Century Gothic;
-    background-color: #ddd;
+    background-color: #f2f2f2;
     color: black;
 }
 
@@ -94,58 +139,141 @@ body {margin:0;}
 
 /* Always set the map height explicitly to define the size of the div element that contains the map. */
 /*Maps API https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-directions */
-      #map {
-        height: 50%;
-        width: 50%;
-        margin: 0 auto 0 auto;
-      }
+
+#map {
+    height: 85%;
+    width: 90%;
+    margin: 0 auto 0 auto;
+    }
 
 
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      .controls {
-        margin-top: 10px;
-        border: 1px solid transparent;
-        border-radius: 2px 0 0 2px;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        height: 32px;
-        width: 80vw;
-        max-width: 250px;
-        outline: none;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-      }
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100vw;
+    margin: 0;
+    padding: 0;
+}
+.controls {
+    margin-top: 10px;
+    border: 1px solid;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    width: 80vw;
+    max-width: 250px;
+    outline: none;
+}
 
-      #origin-input,
-      #destination-input {
-        background-color: #fff;
-        font-family: Roboto;
-        font-size: 15px;
-        font-weight: 300;
-        margin-left: 12px;
-        padding: 0 11px 0 13px;
-        text-overflow: ellipsis;
-        width: 200px;
-      }
+#origin-input,
+#destination-input {
+    background-color: #fff;
+    font-family: Century Gothic;
+    font-size: 13px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+}
 
-      #origin-input:focus,
-      #destination-input:focus {
-        border-color: #4d90fe;
-      }
+#origin-input:focus,
+#destination-input:focus {
+    border-color: #4d90fe;
+}
+#origin-input-path,
+#destination-input-path {
+    background-color: #fff;
+    font-family: Century Gothic;
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
 
-      #mode-selector {
-        color: #fff;
-        background-color: #4d90fe;
-        margin-left: 12px;
-        padding: 5px 11px 0px 11px;
-      }
+    height: 40px;
+    width: 80vw;
+    max-width: 280px;
+}
 
-      #mode-selector label {
-        font-family: Roboto;
-        font-size: 13px;
-        font-weight: 300;
-      }
+#origin-input-path:focus,
+#destination-input-path:focus {
+    border-color: #4d90fe;
+}
+
+#mode-selector {
+    color: #fff;
+    background-color: #4d90fe;
+    margin-left: 12px;
+    padding: 5px 11px 0px 11px;
+}
+
+#mode-selector label {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+
+.logIn label{
+    font-weight:bold; 
+    font-size:5vh; 
+}
+
+
+
+.logIn input{
+    font-size:30px; 
+    padding: 5px 5px 5px 5px; 
+    height: 43px;
+}
+
+.search img {
+    height:6vh;
+    width:9vw;
+    margin:0 0 10px 0;
+}
+
+.search input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.bouton{
+    width: 30%;
+    height: 5vh;
+    font-size: 20px;
+    line-height: 3px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.safetyTips div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    max-width: 90%;
+}
+
+.safetyTips h1{
+    font-size:5vw;
+    font-family: Century Gothic; 
+}
+
+.safetyTips p{
+    font-family: Century Gothic; 
+    font-style: italic;
+    font-size:5vw;
+    padding: 15px 15px;
+}
+
+
+
+
+

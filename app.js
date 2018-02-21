@@ -11,10 +11,14 @@ var path = require('path');
 var handlebars = require('express3-handlebars');
 
 var index = require('./routes/index');
-var safePlaces = require('./routes/SafePlaces');
 var safePath = require('./routes/SafePath');
 var routing = require('./routes/Routing');
 var arrival = require('./routes/Arrival');
+var login = require('./routes/login');
+// var add = require('./routes/add');
+var signup = require('./routes/signUp');
+
+
 // Example route
 // var user = require('./routes/user');
 
@@ -48,27 +52,22 @@ if ('development' == app.get('env')) {
 
 
 // Add routes here
-app.get('/', index.view);
+// app.get('/', index.view);
+// app.post('/safePath', safePath.view);
+// //app.get('/routing/:start/:destination', routing.view);
+// app.get('/routing/:start/:destination', routing.view);
+// app.get('/arrival', arrival.view);
+// app.get('/login', login.view);
+
+app.get('/index', index.view);
 app.post('/safePath', safePath.view);
-//app.get('/safePlace', safePlaces.view);
-app.get('/routing', routing.view);
+app.get('/routing/:start/:destination', routing.view);
 app.get('/arrival', arrival.view);
+app.get('/', login.view);
+// app.get('/add',add.addUser);
+app.get('/signup',signup.view);
 
-app.post('/safePath', function(req, res){
-    var start = req.body.start;
-    var dest = req.body.destination;
-    if (start != '' && dest != '') {
-        res.redirect('/safePath/' + start + '/' + dest);
-    } else if (start != ''){
-        res.redirect('/safePath/' + start + '/' + start);
-    } else if ( dest != '') {
-        res.redirect('/safePath/' + dest + '/' + dest);
-    }
-    else{
-        res.redirect('/');
-    }
 
-})
 // Example route
 // app.get('/users', user.list);
 
