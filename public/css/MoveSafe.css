@@ -47,6 +47,11 @@ font-family:Century Gothic; padding: 6px 10px;border-radius: 0;border: 1px solid
 font-size:12px
 }
 
+#mapLegend{
+    border-collapse: separate;
+    border-spacing: 5px 5px;
+}
+
 .gm-style-mtc {
   display: none;
 }

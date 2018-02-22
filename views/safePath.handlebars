@@ -66,6 +66,7 @@
   </form>
   </div>
 </div>
+
 <div class="card-board centered" id="infoBar" class="pathInfo" style="position:relative; left:5vw; top:9vh; 
     border-radius: 4px;
 ">
@@ -77,13 +78,24 @@
 <!--map-->
     <div style="position:relative; top:9vh;" width="80vw" id="map"></div>
     <div id="panel"></div>
-    <div style="position:relative; top:10vh;left:5vw" width="80vw">
-        <p> Unsafe<img src="images/legend.png" height="30px">Safe</p>
+    <div style="position:relative; top:10vh;" width="80vw">
+        <!--<p> Unsafe<img src="images/legend.png" height="30px">Safe</p>-->
+        <table id="mapLegend" align="center">
+            <tr style="font-size: 5vw" >
+                <td align="center">Safe</td>
+                <td width="12%" align="center" style="background-color: rgba(4, 21, 249,0.4)">1</td>
+                <td width="12%" align="center" style="background-color: rgba(0,153,51, 0.4)">2</td>
+                <td width="12%" align="center" style="background-color: rgba(255,255,0, 0.4)">3</td>
+                <td width="12%" align="center" style="background-color: rgba(255,153,0, 0.4)">4</td>
+                <td width="12%" align="center" style="background-color: rgba(255,0,0, 0.4)">5</td>
+                <td align="center">Unsafe</td>
+            </tr>
+        </table>
     </div>
 
 <!--information of path-->
     <a href="/routing/{{start}}/{{destination}}">
-        <button class="bouton btn-success" style="position:relative; top:8vh; left:5vw; width:90vw;height:6vh;">Start</button></a>
+        <button class="bouton btn-success" style="position:relative; top:11vh; left:5vw; width:90vw;height:6vh;">Start</button></a>
 
 </div>
 
@@ -92,6 +104,8 @@
 <p style="font-size: 8px; position:relative;right:-58vw; top:3vh;font-style: italic;" >neighborhood data was provided by <img style="height:15px"src="http://www.pvhc.net/img8/lazfyirwsgqitzoqosou.jpg"></p>
 </div>
 <params id="routeIndex" value="0"></params>
+
+
 <script src="https://code.jquery.com/jquery.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function(event) { 
