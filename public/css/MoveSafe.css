@@ -225,18 +225,47 @@ html, body {
 }
 
 
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.loginCard{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    max-width: 90%;
+    height: 50vh;
+}
 
 .logIn input[type=email]{  
-    width: 100%;
+    width: 80vw;
+    height:20%;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 3vh;
     background-color: white;
-    background-image: url('images/Email-Icon.png');
-    background-position: 10px 10px; 
+    background-image: url('../images/Email-Icon.png');
+    background-size: 10% 80%;
+    background-position: 70vw 4px; 
     background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
+    padding: 5px 5px 5px 20px;
+}
+
+.logIn input[type=password]{  
+    width: 80vw;
+    height:20%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 3vh;
+    background-color: white;
+    background-image: url('../images/password.png');
+    background-size: 8% 65%;
+    background-position: 71vw 6px; 
+    background-repeat: no-repeat;
+    padding: 5px 5px 5px 20px;
 }
 
 .search img {
