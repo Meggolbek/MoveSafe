@@ -18,44 +18,40 @@
   <body>
 
 
-    <div class="topnav card-block center-block" style="position:relative; top:12vh;width:90vw;border-radius: 4px;">
-      <a padding="100px"  id="navigationBarTitle" align="right">MoveSafe</a>
+    <div class="topnav card-block">
+      <a padding="100px" id="navigationBarTitle" align="right">MoveSafe</a>
     </div>
 
-<div class="loginCard center-block" style="position:relative; top:12vh;">
-<div  style="position:relative; top:5vh; bottom:3vh">
+    <div class="originalLogIn">
     <div class="LogIn">
+        <br>
+        <br>
         <div class="logIn">
             <div class="form-group col-md-6">
-                <input type="email" class="form-control center-block" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted" style="font-size:15px; padding: 10px 5px 10px 28px;">We'll never share your email.</small>
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted" style="font-size:15px; padding: 5px 5px 5px 5px;">We'll never share your email with anyone else.</small>
             </div>
-            <div class="form-group col-md-6" style="position:relative;top:2vh">
-                <input type="password" class="form-control center-block" id="exampleInputPassword1" placeholder="Enter password">
-                <small id="emailHelp" class="form-text text-muted" style="font-size:15px; padding: 10px 5px 5px 28px;">New user ? Sign up below !</small>
+            <div class="form-group col-md-6">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter password" style=" padding: 5px 5px 5px 5px;">
+                <small id="emailHelp" class="form-text text-muted" style="font-size:15px; padding: 5px 5px 5px 5px;">New user? Sign up below!</small>
             </div>
-            <div display="inlign-block">
-              <a href='/signup'>
-            <a href='/index'><button type="submit" class="btn btn-primary text-center" style="margin:10px 0px 0px 20px; width: 40vw; max-height:40px; max-width:150px; font-size: 20px;">Login</button></a>
-            <a href='/signup'><button type="submit" class="btn btn-primary text-center" style="margin:10px 0px 0px 20px; width: 40vw; max-height:40px; max-width:150px; font-size: 20px;">Sign Up</button></a>
-              </a>
-            </div>
-  </div>
-</div>
-</div>
+        </div>
+            <a href='/index'><button type="submit" class="btn btn-primary text-center" style="margin:10px 0px 0px 20px; width: 45vw; max-height:40px; max-width:150px; font-size: 20px;">Login</button></a>
+            <a href='/signup'><button type="submit" class="btn btn-primary text-center" style="margin:10px 0px 0px 20px; width: 45vw; max-height:40px; max-width:150px; font-size: 20px;">Sign Up</button></a>
+
+    </div>
 </div>
 
-
-
-<div class="loginCard center-block" style="position:relative; top:20vh;height:9vh;width: 90vw">
-<div  style="position:relative; top:3vh; bottom:3vh">
-
-<div class="LogIn">
-    <div class="logIn">
-      <div class="facebookLogin"data-size="large" data-width="100%">
-        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"style="position:relative;left:58vw;top:-7vh">
+    <div class="facebookLogin">
+        <br>
+        <br>
+        <p style="font-size:20px; padding: 15px 5px 5px 25px; text-decoration:underline; font-family: 'Apple Chancery'">Log in through Facebook, below!</p>
+        <fb:login-button scope="public_profile,email" size="xlarge" onlogin="checkLoginState();" style="margin:10px 0px 0px 20px; width: 90vw !important; max-height:40px; max-width:400px;">
+             Facebook  Login
         </fb:login-button>
-      </div>
+    </div>
 
     <div class="FBLoggedInPlaceHolder">
         <h1 class="FBsuccess centered" style="color:#007bff; font-style:italic; font-family: 'Apple Chancery';"></h1>
@@ -64,18 +60,10 @@
         <p class="FBinsertname centered" style="font-size: 20px;"></p>
         <img class="FBPhoto img-responsive" src="" />
         <a href='/index' class="centered"></a>
-    {{> facebook}}
+
     </div>
-</div>
 
-</div>
-</div>
-</div>
-
-
-
-
-
+    {{> facebook}}
     <script src="/js/facebook.js"></script>
   </body>
 </html>
