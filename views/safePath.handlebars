@@ -40,7 +40,7 @@
 
 
 
-
+  {{#if mapView}}
 <!--place holder--> 
 <div class="dropdown" style="background-color:#ebf0fa; position:absolute; left:5vw; font-family:Century Gothic;font-size:15px">
     <p display="inline;" style="position:relative;left:15vw;top:6px" width="90vw" ><img src="images/search-black.png" height="15" width="15" style="position:relative;left:-10vw;top:-1px" >
@@ -66,7 +66,7 @@
   </form>
   </div>
 </div>
-  {{#if mapView}}
+
 <div class="card-board centered" id="infoBar" class="pathInfo" style="position:relative; left:5vw; top:9vh; 
     border-radius: 4px;
 ">
@@ -105,7 +105,22 @@
 </div>
 <params id="routeIndex" value="0"></params>
   {{else}}
-      <p>{{message}}</p>
+      <div class="cardboard search" style="position:relative;left:5vw; top:5vh" padding="10px">
+          <div style="width:80vw">
+              <p style="position:relative; font-size: 20px">{{message}}</p>
+          </div>
+          <form action="/safePath" method="post">
+              <div style="position:relative;top:2vh;margin-bottom: 20px">
+                  <input required id="origin-input-path" type="text" name="start" value="{{start}}" placeholder="enter a starting location...">
+              </div>
+              <div class="form-group" style="position:relative;top:0vh;margin-bottom: 20px">
+                  <input required id="destination-input-path" type="text" name="destination" value="{{destination}}" placeholder="enter a destination...">
+              </div>
+              <div class="form-group" style="position:relative;left:48vw">
+                  <button class="bouton btn-success" type="submit">Search</button>
+              </div>
+          </form>
+      </div>
   {{/if}}
 
 <script src="https://code.jquery.com/jquery.js"></script>
