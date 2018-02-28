@@ -54,7 +54,6 @@ if ('development' == app.get('env')) {
 // Add routes here
 // app.get('/', index.view);
 // app.post('/safePath', safePath.view);
-// //app.get('/routing/:start/:destination', routing.view);
 // app.get('/routing/:start/:destination', routing.view);
 // app.get('/arrival', arrival.view);
 // app.get('/login', login.view);

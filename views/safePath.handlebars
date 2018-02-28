@@ -51,12 +51,12 @@
     <form action="/safePath" method = "post">
         <div class="form-group centered" style="position:absolute; top:2vh; left:13vw;">
             <img src="images/A_Point.png" height="18" width="15">
-            <input required id="origin-input" class="controls"  type="text" value= "{{start}}" name="start" placeholder="enter an origin location" style="font-size:12px;width:69vw">
+            <input required id="origin-input" class="controls"  type="text" value= "{{start}}" name="start" placeholder="enter a starting location" style="font-size:12px;width:69vw">
       <button  id="reset-button-start" onclick="clearTextStart()">x</button>
         </div>
         <div class="form-group centered" style="position:absolute; top:10vh; left:12vw;">
             <img src="images/B_Point.png" height="18" width="20">
-            <input required id="destination-input" class="controls"  type="text" value="{{destination}}" name="destination" placeholder="enter a destination location" style="font-size:12px;width:69vw">
+            <input required id="destination-input" class="controls"  type="text" value="{{destination}}" name="destination" placeholder="enter a destination" style="font-size:12px;width:69vw">
       <button id="reset-button-dest" onclick="clearTextDest()">x</button>
         </div>
 
@@ -66,7 +66,7 @@
   </form>
   </div>
 </div>
-
+  {{#if mapView}}
 <div class="card-board centered" id="infoBar" class="pathInfo" style="position:relative; left:5vw; top:9vh; 
     border-radius: 4px;
 ">
@@ -104,7 +104,9 @@
 <p style="font-size: 8px; position:relative;right:-58vw; top:3vh;font-style: italic;" >neighborhood data was provided by <img style="height:15px"src="http://www.pvhc.net/img8/lazfyirwsgqitzoqosou.jpg"></p>
 </div>
 <params id="routeIndex" value="0"></params>
-
+  {{else}}
+      <p>{{message}}</p>
+  {{/if}}
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script>
