@@ -21,41 +21,82 @@
 
 
   <div class="topnav card-block">
-      <div>
+      <!--<div>-->
           <a id="navigationBarTitle" >Move Safe</a>
-      </div>
+      <!--</div>-->
   </div>
 
 
 
-<div class="col-md-6 main-div mx-auto" >
-    <div class="card centered" style="margin:5vh 0 0 0;">
-        <img class="card-img-top" src="images/erwitt.jpg" alt="Card image cap">
-        <div class="card-block" style="width: 91vw";>
-            <div class="card-header" style="font-family:Century Gothic; ">
-                <h3>Come and join us!</h3>
+    <div class="col-md-6 main-div mx-auto" >
+        <div class="card centered" style="margin:5vh 0 0 0;">
+            <img class="card-img-top centered" src="images/shiba.png" style="width: 48%; margin-left: 28%;">
+            <div class="card-block" style="width: 91vw";>
+                <div class="card-header" style="font-family:Century Gothic; ">
+                    <h3>Come and join us!</h3>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div >
-<div style="position:relative;top:3vh">
-    <form action="/">
-        <div class="form-group col-md-6">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <div class="wholeSignUp">
+        <div style="position:relative;top:3vh">
+            <!--<form action="/">-->
+                <div class="logIn">   <!--this class is just for getting the CSS-->
+                    <div class="form-group col-md-6">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@moveSafe.com">
+                        <small id="emailHelp" class="form-text text-muted" style="font-size:15px; padding: 5px 5px 5px 5px;">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter password" style=" padding: 5px 5px 5px 5px;">
+                    </div>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary text-center centered" id="signUpBtn" style="margin:0% 15% 5% 2%; height:30%; width:95%; font-size: 25px;">Sign up!</button>
+             <!--</form>-->
         </div>
-        <div class="form-group col-md-6">
-            <label for="exampleInputPassword1" style="font-weight:bold; font-size:30px; padding: 5px 5px 5px 5px;">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter password">
-        </div>
-        <br>
-        <br>
-        <button type="submit" class="btn btn-primary text-center" style="margin:10px 10px 0px 18px; height:45px; width:375px; font-size: 25px;">Sign up!</button>
-     </form> 
-</div>
-</div>
+    </div>
+
+
+      <div class="SignUpPlaceHolder">
+          <br>
+          <br>
+          <h1 class="SignUpuccess centered" style="color:#007bff; font-style:italic; font-family: 'Apple Chancery';"></h1>
+          <br>
+          <div id="signUpSuccessBtn" class="centered">
+             <a href='/index' class="centered"></a>
+          </div>
+      </div>
+
+  </div>
+
   </body>
 </html>
+
+
+
+
+<script>
+
+    $('#signUpBtn').click(function () {
+
+        $(".wholeSignUp").hide();
+
+        // $(".SignUpPlaceHolder").addClass("jumbotron");
+
+        $(".SignUpuccess").text("Successfully sign up!");
+
+        $("#signUpSuccessBtn a").append("<br><br><button type=\"submit\" class=\"btn btn-primary centered\" style=\"width: 80vw; max-height:50px; max-width:300px; font-size: 23px;\">Continue with MoveSafe!</button>");
+
+    })
+
+
+
+
+
+</script>
+
+
+
