@@ -3,9 +3,9 @@ $(document).ready(function () {
 });
 
 function initialize() {
-    var inputStart = document.getElementById('origin-input');
+    var inputStart = document.getElementById('origin-input-path');
     var autocompleteStart = new google.maps.places.Autocomplete(inputStart);
 
-    var inputDest = document.getElementById('destination-input');
+    var inputDest = document.getElementById('destination-input-path');
     var autocompleteDest = new google.maps.places.Autocomplete(inputDest);
 }
