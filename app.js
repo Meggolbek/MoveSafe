@@ -58,6 +58,7 @@ if ('development' == app.get('env')) {
 app.get('/index', index.view);
 app.get('/safePath', safePath.view);
 app.post('/safePath', safePath.view);
+app.post('/safeAlt', safePath.viewAlt);
 app.get('/safePath', safePath.view);
 app.get('/safeAlt', safePath.viewAlt);
 app.get('/routing/:start/:destination', routing.view);
