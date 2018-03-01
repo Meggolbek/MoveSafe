@@ -48,9 +48,6 @@ if ('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
 
-
-
-
 // Add routes here
 // app.get('/', index.view);
 // app.post('/safePath', safePath.view);
@@ -61,6 +58,8 @@ if ('development' == app.get('env')) {
 app.get('/index', index.view);
 app.get('/safePath', safePath.view);
 app.post('/safePath', safePath.view);
+app.get('/safePath', safePath.view);
+app.get('/safeAlt', safePath.viewAlt);
 app.get('/routing/:start/:destination', routing.view);
 app.get('/arrival', arrival.view);
 app.get('/', login.view);

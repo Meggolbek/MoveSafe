@@ -20,7 +20,14 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS6-vX7RQf9E6NV3F5rytl_Eh_ALQNIlE&callback=initMap">
     </script>
     <link href="/css/Directions-complex.css">
+    <script src="js/GooglePlaces.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link href="/css/bootstrap.css" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
 </head>
+
 
 <body>
 
@@ -42,7 +49,7 @@
 
   {{#if mapView}}
 <!--place holder--> 
-<div class="dropdown" style="background-color:#ebf0fa; position:absolute; left:5vw; font-family:Century Gothic;font-size:15px">
+<div class="dropdown" style="background-color:whitesmoke; position:absolute; left:5vw; top:18vh;font-size:3vh; border-radius: 4px;">
     <p display="inline;" style="position:relative;left:15vw;top:6px" width="90vw" ><img src="images/search-black.png" height="15" width="15" style="position:relative;left:-10vw;top:-1px" >
         Search for a new place...
     </p>
@@ -51,13 +58,11 @@
     <form action="/safePath" method = "post">
         <div class="form-group centered" style="position:absolute; top:2vh; left:13vw;">
             <img src="images/A_Point.png" height="18" width="15">
-            <input required id="origin-input" class="controls"  type="text" value= "{{start}}" name="start" placeholder="enter a starting location" style="font-size:12px;width:69vw">
-      <button  id="reset-button-start" onclick="clearTextStart()">x</button>
+            <input required id="origin-input-path" class="controls"  type="text" value= "{{start}}" name="start" placeholder="enter a starting location" style="font-size:12px;width:69vw">
         </div>
         <div class="form-group centered" style="position:absolute; top:10vh; left:12vw;">
             <img src="images/B_Point.png" height="18" width="20">
-            <input required id="destination-input" class="controls"  type="text" value="{{destination}}" name="destination" placeholder="enter a destination" style="font-size:12px;width:69vw">
-      <button id="reset-button-dest" onclick="clearTextDest()">x</button>
+            <input required id="destination-input-path" class="controls"  type="text" value="{{destination}}" name="destination" placeholder="enter a destination location" style="font-size:12px;width:69vw">
         </div>
 
         <div class="form-group centered" style="position:absolute; top:17vh;">
@@ -66,36 +71,43 @@
   </form>
   </div>
 </div>
-
-<div class="card-board centered" id="infoBar" class="pathInfo" style="position:relative; left:5vw; top:9vh; 
-    border-radius: 4px;
+<div class="card-board centered" id="infoBar" class="pathInfo" style="position:relative; left:5vw; top:10vh; 
+    border-radius: 4px;background-color:#7182A9;color:white;
 ">
     <div class="row" style="position:relative;top:2vh;font-weight: bold;">
-        <p id="safetyLevel" class="col-6 col-md-4" style="position:relative;left:12px;">Safety Level: 1</p>
+        <p id="safetyLevel" class="col-6 col-md-4" style="position:relative;left:12px;">Path rating: 1</p>
         <p id="ETA" class="col-6 col-md-4" style="position:relative;right:12px">ETA: 2 min</p>
     </div>
-</div>
-<!--map-->
-    <div style="position:relative; top:9vh;" width="80vw" id="map"></div>
-    <div id="panel"></div>
-    <div style="position:relative; top:10vh;" width="80vw">
         <!--<p> Unsafe<img src="images/legend.png" height="30px">Safe</p>-->
+</div>
+<div class="card-board centered" id="infoBar" class="pathInfo" style="position:relative; left:5vw; top:9vh;height:5vh;">
+
         <table id="mapLegend" align="center">
-            <tr style="font-size: 5vw" >
+            <tr style="font-size: 3vw" >
                 <td align="center">Safe</td>
-                <td width="12%" align="center" style="background-color: rgba(4, 21, 249,0.4)">1</td>
-                <td width="12%" align="center" style="background-color: rgba(0,153,51, 0.4)">2</td>
-                <td width="12%" align="center" style="background-color: rgba(255,255,0, 0.4)">3</td>
-                <td width="12%" align="center" style="background-color: rgba(255,153,0, 0.4)">4</td>
-                <td width="12%" align="center" style="background-color: rgba(255,0,0, 0.4)">5</td>
+                <td width="13%" align="center" style="background-color: rgba(4, 21, 249,0.4)"></td>
+                <td width="13%" align="center" style="background-color: rgba(0,153,51, 0.4)"></td>
+                <td width="13%" align="center" style="background-color: rgba(255,255,0, 0.4)"></td>
+                <td width="13%" align="center" style="background-color: rgba(255,153,0, 0.4)"></td>
+                <td width="13%" align="center" style="background-color: rgba(255,0,0, 0.4)"></td>
                 <td align="center">Unsafe</td>
             </tr>
         </table>
-    </div>
+</div>
+
+
+<!--map-->
+    <div style="position:relative; top:8vh;" width="80vw" id="map"></div>
+    <div id="panel"></div>
+
 
 <!--information of path-->
     <a href="/routing/{{start}}/{{destination}}">
-        <button class="bouton btn-success" style="position:relative; top:11vh; left:5vw; width:90vw;height:6vh;">Start</button></a>
+{{#if viewAlt}}
+        <button class="bouton btn-success" style="position:relative; top:8vh; left:5vw; width:90vw;height:8vh;">See directions</button></a>
+{{else}}
+        <button class="bouton btn-success" style="position:relative; top:8vh; left:5vw; width:90vw;height:8vh;">GO!</button></a>
+{{/if}}
 
 </div>
 
