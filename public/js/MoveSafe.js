@@ -10,6 +10,14 @@
  */
 function initializePage() {
     // add any functionality and listeners you want here
+    $(".testButton").click(function(e){
+        e.preventDefault();
+        gtag('event', 'click', {
+            'event_category': 'like',
+            'event_label': 'user clicked like',
+            'value': 1
+        });
+    });
 }
 
 function clearTextStart()  
