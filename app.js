@@ -17,7 +17,7 @@ var arrival = require('./routes/Arrival');
 var login = require('./routes/login');
 // var add = require('./routes/add');
 var signup = require('./routes/signUp');
-
+var faq = require('./routes/FAQ');
 
 // Example route
 // var user = require('./routes/user');
@@ -64,6 +64,7 @@ app.get('/safeAlt', safePath.viewAlt);
 app.get('/routing/:start/:destination', routing.view);
 app.get('/arrival', arrival.view);
 app.get('/', login.view);
+app.get('/FrequentlyAskedQuestions', faq.view);
 // app.get('/add',add.addUser);
 app.get('/signup',signup.view);
 
