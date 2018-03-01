@@ -11,10 +11,9 @@
 function initializePage() {
     // add any functionality and listeners you want here
     $(".testButton").click(function(e){
-        e.preventDefault();
         gtag('event', 'click', {
-            'event_category': 'like',
-            'event_label': 'user clicked like',
+            'event_category': 'testBtn',
+            'event_label': 'user clicked tester',
             'value': 1
         });
     });
