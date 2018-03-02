@@ -10,7 +10,9 @@
  */
 function initializePage() {
     // add any functionality and listeners you want here
+    console.log("here1");
     $(".testButton").click(function(e){
+        console.log("here2");
         gtag('event', 'click', {
             'event_category': 'testBtn',
             'event_label': 'user clicked tester',
