@@ -16,6 +16,7 @@ function initializePage() {
             'event_label': 'user clicked tester',
             'value': 1
         });
+        window.location.href="/routing/"+ document.getElementById('origin-input-path').value+"/"+document.getElementById('destination-input-path').value;
     });
 }
 
