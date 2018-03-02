@@ -2,6 +2,15 @@
 
 <html>
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114997956-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-114997956-1');
+    </script>
     <title>MoveSafe - Safe Path</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -104,9 +113,9 @@
 <!--information of path-->
     <a href="/routing/{{start}}/{{destination}}">
 {{#if viewAlt}}
-        <button class="bouton btn-success" style="position:relative; top:8vh; left:5vw; width:90vw;height:8vh;">See directions</button></a>
+        <button class="testButton bouton btn-success" style="position:relative; top:8vh; left:5vw; width:90vw;height:8vh;">See directions</button></a>
 {{else}}
-        <button class="bouton btn-success" style="position:relative; top:8vh; left:5vw; width:90vw;height:8vh;">GO!</button></a>
+        <button class="testButton bouton btn-success" style="position:relative; top:8vh; left:5vw; width:90vw;height:8vh;">GO!</button></a>
 {{/if}}
 
 </div>
@@ -136,6 +145,7 @@
   {{/if}}
 
 <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="/js/map.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function(event) { 
         document.getElementById("origin-input").value = "{{start}}";

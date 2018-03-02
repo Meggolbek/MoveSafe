@@ -60,16 +60,17 @@ var map;
          // var color = type == 0 ? '#f00' : '#0f0';
          var color;
          if(type == 0) {
-             color = '#0415f9';
+             color = '#75e052';
          } else if (type == 1) {
-             color = '#009933';
+             color = '#F37C84';
          } else if (type == 2) {
-             color = '#ffff00';
+             color = '#EA202C';
          } else if (type == 3) {
-             color = '#ff9900';
+             color = '#9D0711';
          } else if (type == 4) {
-             color = '#ff0000';
+             color = '#ff3333';
          }
+
          return {
              clickable:false,
              fillColor: color,
@@ -85,8 +86,8 @@ var map;
         // Retrieve the start and end locations and create a DirectionsRequest using
         // WALKING directions.
         directions.route({
-          origin: document.getElementById('origin-input').value,
-          destination: document.getElementById('destination-input').value,
+          origin: document.getElementById('origin-input-path').value,
+          destination: document.getElementById('destination-input-path').value,
           provideRouteAlternatives: true,
           travelMode: 'WALKING'
         }, function(response, status) {
