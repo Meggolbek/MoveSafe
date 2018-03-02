@@ -55,14 +55,32 @@
       <a href="/" style="float: right; padding-right: 10%">Logout</a>
   </div>
 
-<div align="center" class="cardboard safetyTips" style="position:relative;top:8vh;" >
-        <div class="card-block" style="border: 1px solid lightgray;
+
+
+  {{#if viewAlt}}
+      <div align="center" class="cardboard safetyTips" style="position:relative;top:8vh;  background-color: orange;" >
+          <div class="card-block" style="border: 1px solid lightgray;
+    border-radius: 4px;  background-color: orange;" >
+              <div class="card-header" style=" background-color: orange;">
+                  <h1 style="font-family: 'Apple Chancery'; font-size: 180%;  background-color: orange;">Where do you want to go ?</h1>
+              </div>
+          </div>
+      </div>
+  {{else}}
+      <div align="center" class="cardboard safetyTips" style="position:relative;top:8vh;" >
+          <div class="card-block" style="border: 1px solid lightgray;
     border-radius: 4px;" >
-            <div class="card-header">
-                <h1>Where do you want to go ?</h1>
-            </div>
-        </div>
-</div>
+              <div class="card-header">
+                  <h1>Where do you want to go ?</h1>
+              </div>
+          </div>
+      </div>
+  {{/if}}
+
+
+
+
+
 <!--place holder--> 
 <div class="cardboard search" style="position:relative;top:10vh" padding="10px">
   <form action="/safePath" method="post">
@@ -82,21 +100,38 @@
 </div>
 </div>
 
-<div align="center" class="cardboard safetyTips" style="position:relative;top:15vh;" >
-        <div class="card-block"style="border: 1px solid lightgray;
-    border-radius: 4px;">
-            <div class="card-header" >
-                <h1>Safety tip of the day</h1>
-            </div>
-        </div>
-</div>
 
-<div class="safetyTips" style="position:relative; top:15vh;left:5vw">
-  <div style='background-color : white; border: 1px solid lightgray;
+
+
+  {{#if viewAlt}}
+      <br><br>
+      <div class="col-md-6 main-div mx-auto" >
+      <div class="card centered" style="margin:5vh 0 0 0;">
+          <img class="card-img-top centered" src="images/shiba.png" style="width: 48%; margin-left: 28%;">
+          <div class="card-block" style="width: 91vw";>
+              <div class="card-header" style="font-family:Century Gothic; ">
+              </div>
+          </div>
+      </div>
+      </div>
+  {{else}}
+      <div align="center" class="cardboard safetyTips" style="position:relative;top:15vh;" >
+          <div class="card-block"style="border: 1px solid lightgray;
+    border-radius: 4px;">
+              <div class="card-header" >
+                  <h1>Safety tip of the day</h1>
+              </div>
+          </div>
+      </div>
+      <div class="safetyTips" style="position:relative; top:15vh;left:5vw">
+          <div style='background-color : white; border: 1px solid lightgray;
     border-radius: 4px;'>
-      <p>{{tip}}</p>
-  </div>
-</div>
+              <p>{{tip}}</p>
+          </div>
+      </div>
+  {{/if}}
+
+
 
 
 <script src="/js/MoveSafe.js"></script>
