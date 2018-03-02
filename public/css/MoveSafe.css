@@ -67,7 +67,7 @@
 
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #02184B;
+    background-color: #110934;
     height: 10vh;
     overflow: hidden;
     text-align: center;
@@ -75,7 +75,7 @@
 }
 
 .navBar {
-    background-color: #7182A9;
+    background-color: #347B98;
     text-align: center;
     height: 12%;
     padding-top:-3vh;
@@ -101,7 +101,7 @@ border-right: 1px solid #ffffff;
 
 /* Style the links inside the navigation bar */
 #navigationBar {
-    color: #e6e6ff;
+    color: #347B98;
     text-decoration: none;
 }
 
