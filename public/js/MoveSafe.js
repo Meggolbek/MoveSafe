@@ -10,6 +10,15 @@ $(document).ready(function() {
  */
 function initializePage() {
     // add any functionality and listeners you want here
+    console.log("here1");
+    $("#searchButton").click(function(e){
+        console.log("here2");
+        gtag('event', 'click', {
+            'event_category': 'testBtn',
+            'event_label': 'user clicked tester',
+            'value': 1
+        });
+    });
 }
 
 function clearTextStart()  
