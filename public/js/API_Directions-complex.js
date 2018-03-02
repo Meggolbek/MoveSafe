@@ -61,7 +61,7 @@ var map;
          var color;
          if(type == 0) {
              color = '#75e052';
-         } else if (type == 1) {s
+         } else if (type == 1) {
              color = '#F37C84';
          } else if (type == 2) {
              color = '#EA202C';
