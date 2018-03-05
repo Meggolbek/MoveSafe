@@ -60,15 +60,15 @@ var map;
          // var color = type == 0 ? '#f00' : '#0f0';
          var color;
          if(type == 0) {
-             color = '#75e052';
+             color = '#0B6600';
          } else if (type == 1) {
-             color = '#F37C84';
+             color = '#48CD37';
          } else if (type == 2) {
-             color = '#EA202C';
+             color = '#DCF2DA';
          } else if (type == 3) {
-             color = '#9D0711';
+             color = '#FF6666';
          } else if (type == 4) {
-             color = '#ff3333';
+             color = '#B20018';
          }
 
          return {

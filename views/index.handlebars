@@ -70,31 +70,27 @@
 
 
   {{#if viewAlt}}
-      <div align="center" class="cardboard safetyTips" style="position:relative;top:8vh;  background-color: #FB9902;" >
-          <div class="card-block" style=";
-    border-radius: 4px;  background-color: #FB9902;" >
+      <div align="center" class="cardboard safetyTips" style="position:relative;top:4vh;" >
+          <div class="card-block" style="border-radius: 4px;  background-color: #FB9902;" >
               <div class="card-header" style=" background-color: #FB9902;">
                   <h1 style="font-family: 'Apple Chancery'; font-size: 180%;  background-color: #FB9902;">Where do you want to go ?</h1>
               </div>
           </div>
       </div>
   {{else}}
-      <div align="center" class="cardboard safetyTips" style="position:relative;top:8vh;" >
+      <div align="center" class="cardboard safetyTips" style="position:relative;top:6vh;" >
           <div class="card-block" style="border: 1px solid lightgray;
     border-radius: 4px;" >
               <div class="card-header">
-                  <h1>Where do you want to go ?</h1>
+                  <h1>Where do you want to go?</h1>
               </div>
           </div>
       </div>
   {{/if}}
 
 
-
-
-
 <!--place holder--> 
-<div class="cardboard search" style="position:relative;top:10vh" padding="10px">
+<div class="cardboard search" style="position:relative;top:5vh" padding="10px">
   <form action="/safePath" method="post">
         <div class="centered" style="position:relative;top:2vh;margin-bottom: 20px">
             <img src="images/A_Point.png" >
@@ -105,8 +101,8 @@
             <input required id="destination-input-path" type="text" name="destination" value="{{destination}}" placeholder="enter a destination...">
         </div>
 
-        <div class="form-group" style="position:relative;left:60vw">
-            <button id="searchButton" class="bouton btn-success" type="submit">Search</button>
+        <div class="form-group">
+            <button id="searchButton" class="bouton btn-success" type="submit" style="position:relative;left:60vw; background-color: #347B98">Search</button>
         </div>
   </form>
 </div>
@@ -117,14 +113,8 @@
 
   {{#if viewAlt}}
       <br><br>
-      <div class="col-md-6 main-div mx-auto" >
-      <div class="card centered" style="margin:5vh 0 0 0;">
+      <div class="col-md-6 main-div mx-auto" style="position: relative; top: 7%">
           <img class="card-img-top centered" src="images/shiba.png" style="width: 48%; margin-left: 28%;">
-          <div class="card-block" style="width: 91vw";>
-              <div class="card-header" style="font-family:Century Gothic; ">
-              </div>
-          </div>
-      </div>
       </div>
   {{else}}
       <div align="center" class="cardboard safetyTips" style="position:relative;top:15vh;" >
