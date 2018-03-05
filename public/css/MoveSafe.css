@@ -301,5 +301,22 @@ html, body {
 
 
 
+.FAQtitle{
+    text-decoration: underline;
+}
+
+.FAQcontent{
+    text-align: justify;
+}
+
+#FAQall {
+    margin: 3% 8%;
+}
+
+.footer {
+    font-family: "Comic Sans MS";
+    font-size: 12px;
+    text-align: center;
+}
 
 
