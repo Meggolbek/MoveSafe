@@ -1,12 +1,14 @@
-
 #infoBar {
     position: relative;
     display: inline-block;
     width : 90vw;
     height:8vh;
-    background-color:#e6e6ff;
+    background-color:#FEFFFF;
     font-size:2.5vh;
     color : black;
+    border-right: solid black;
+    border-left: solid black;
+    border-top: solid black;
 }
 
 .dropdown {
@@ -64,13 +66,9 @@
     margin: 5px 4px;
 }
 
-body{
-    background-color: #D4EDF7;
-}
-
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #110934;
+    background-color: #17252A;
     height: 10vh;
     overflow: hidden;
     text-align: center;
@@ -78,9 +76,9 @@ body{
 }
 
 .navBar {
-    background-color: #347B98;
+    background-color: #3AAFA9;
     text-align: center;
-    height: 12%;
+    height: 5%;
     padding-top:-3vh;
 
 }
@@ -131,9 +129,6 @@ border-right: 1px solid #ffffff;
 }
 
 
-
-body {margin:0;}
-
 /* Always set the map height explicitly to define the size of the div element that contains the map. */
 /*Maps API https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-directions */
 
@@ -146,10 +141,9 @@ body {margin:0;}
 
 /* Optional: Makes the sample page fill the window. */
 html, body {
-    height: 100vw;
-    margin: 0;
-    padding: 0;
-    }
+    height: 100vh;
+    background-color: #FEFFFF;
+}
 .controls {
     margin-top: 10px;
     border: 1px solid;
