@@ -110,6 +110,7 @@ var map;
                 $(".pathInfo").hide();
                 $("#safetyLevel").hide();
                 $("#ETA").hide();
+                $("#mapLegend").hide();
                 $("#map").text("Please press Search for a new place and enter in a valid place or address");
                 $("#zillowDiv").hide();
             }
