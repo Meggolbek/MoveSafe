@@ -67,7 +67,7 @@ app.get('/FrequentlyAskedQuestions', faq.view);
 // app.get('/add',add.addUser);
 app.get('/signup',signup.view);
 
-app.get('/faq',faq.view);
+// app.get('/faq',faq.view);
 
 
 // Example route
