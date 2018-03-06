@@ -79,8 +79,7 @@
       </div>
   {{else}}
       <div align="center" class="cardboard safetyTips" style="position:relative;top:6vh;" >
-          <div class="card-block" style="background-color: #2B7A78; border: 1px solid lightgray;
-    border-radius: 4px;" >
+          <div class="card-block" style="background-color: #2B7A78; border: 1px solid lightgray;border-radius: 4px;" >
               <div class="card-header" style="background-color: #2B7A78;">
                   <h1 style="color: white">Where do you want to go?</h1>
               </div>
@@ -89,24 +88,44 @@
   {{/if}}
 
 
-<!--place holder--> 
-<div class="cardboard search" style="position:relative;top:5vh" padding="10px">
-  <form action="/safePath" method="post">
-        <div class="centered" style="position:relative;top:2vh;margin-bottom: 20px">
-            <img src="images/A_Point.png" >
-            <input required id="origin-input-path" type="text" name="start" value="{{start}}" placeholder="enter a starting location...">
-        </div>
-        <div class="form-group centered" style="position:relative;top:0vh;margin-bottom: 20px">
-            <img src="images/B_Point.png">
-            <input required id="destination-input-path" type="text" name="destination" value="{{destination}}" placeholder="enter a destination...">
-        </div>
+<!--place holder-->
 
-        <div class="form-group">
-            <button id="searchButton" class="bouton btn-success" type="submit" style="position:relative;left:60vw;border-color:#2B7A78; background-color: #3AAFA9">Search</button>
-        </div>
-  </form>
-</div>
-</div>
+
+<!--<div class="cardboard search" style="position:relative;top:5vh; padding:10px; border: 1px solid black;">-->
+  <!--<form action="/safePath" method="post">-->
+        <!--<div class="centered" style="position:relative;top:2vh;margin-bottom: 20px">-->
+            <!--<img src="images/A_Point.png" >-->
+            <!--<input required id="origin-input-path" type="text" name="start" value="{{start}}" placeholder="enter a starting location...">-->
+        <!--</div>-->
+        <!--<div class="form-group centered" style="position:relative;top:0vh;margin-bottom: 20px">-->
+            <!--<img src="images/B_Point.png">-->
+            <!--<input required id="destination-input-path" type="text" name="destination" value="{{destination}}" placeholder="enter a destination...">-->
+        <!--</div>-->
+
+        <!--<div class="form-group">-->
+            <!--<button id="searchButton" class="bouton btn-success" type="submit" style="position:relative;left:60vw;border-color:#2B7A78; background-color: #3AAFA9">Search</button>-->
+        <!--</div>-->
+  <!--</form>-->
+<!--</div>-->
+  <div style="position:relative; top:1vh;left:5vw;right:5vw; margin-right:10.3vw;">
+      <div class="cardboard search" style="position:relative;top:5vh;right:1vw;left:0.2vw; padding:8px; border: 1px solid lightgray;border-radius: 4px;">
+          <form action="/safePath" method="post">
+              <div class="centered" style="position:relative;top:2vh;margin-bottom: 20px; margin-right:0.1vw;">
+                  <img src="images/A_Point.png" >
+                  <input required id="origin-input-path" type="text" name="start" value="{{start}}" placeholder="enter a start...">
+              </div>
+              <div class="form-group centered" style="position:relative;top:0vh;margin-bottom: 20px; margin-right:0.1vw;">
+                  <img src="images/B_Point.png">
+                  <input required id="destination-input-path" type="text" name="destination" value="{{destination}}" placeholder="enter a destination...">
+              </div>
+
+              <div class="form-group">
+                  <button id="searchButton" class="bouton btn-success" type="submit" style="position:relative;left:60vw; border-color:#2B7A78; background-color: #3AAFA9; padding-right:5vw;">Search</button>
+              </div>
+          </form>
+      </div>
+  </div>
+
 
 
 
