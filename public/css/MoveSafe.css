@@ -15,6 +15,7 @@
     position: relative;
     display: inline-block;
     width : 90vw;
+    background-color: whitesmoke;
 }
 
 .dropdown-contents {
