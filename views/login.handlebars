@@ -19,7 +19,13 @@
 
 
     <div class="topnav card-block">
-      <a padding="100px" id="navigationBarTitle" align="right">Welcome to MoveSafe</a>
+      <a padding="100px" id="navigationBarTitle" align="right">Welcome to MoveSafe!</a>
+    </div>
+
+    <div class="col-md-6 main-div mx-auto" >
+        <div class="card centered" style="margin:5vh 0 0 0;">
+            <img class="card-img-top centered" src="images/shiba.png" style="width: 48%; margin-left: 28%;">
+        </div>
     </div>
 
     <div class="originalLogIn">
@@ -38,31 +44,12 @@
                 <small id="emailHelp" class="form-text text-muted" style="font-size:15px; padding: 5px 5px 5px 5px;">New user? Sign up below!</small>
             </div>
         </div>
-            <a href='/index'><button type="submit" class="btn btn-primary text-center" style="border-color:#2B7A78; background-color: #3AAFA9; margin:10px 0px 10px 20px; width: 55vw; max-height:40px; max-width:160px; font-size: 20px;">Login</button></a>
-            <a href='/signup'><button type="submit" class="btn btn-primary text-center" style="border-color:#2B7A78; background-color: #3AAFA9; margin:10px 0px 10px 20px; width: 85vw; max-height:40px; max-width:160px; font-size: 20px;">Sign Up</button></a>
+        <div class="centered" style="position:relative;left:-2vw">
+            <a href='/signup'><button type="submit" class="btn btn-primary text-center" style="border-color:#2B7A78; background-color: #3AAFA9; margin:10px 0px 10px 20px; width: 55vw; max-height:40px; max-width:160px; font-size: 20px;">Sign Up</button></a>
+            <a href='/index'><button type="submit" class="btn btn-primary text-center" style="border-color:#2B7A78; background-color: #3AAFA9; margin:10px 0px 10px 20px; width: 85vw; max-height:40px; max-width:160px; font-size: 20px;">Login</button></a>
+        </div>
 
+      </div>
     </div>
-</div>
-
-    <div class="facebookLogin">
-        <br>
-        <br>
-        <fb:login-button class="centered" scope="public_profile,email" size="xlarge" onlogin="checkLoginState();" style="margin:10px 0px 0px 20px; width: 90vw !important; max-height:40px; max-width:400px;">
-             Facebook  Login
-        </fb:login-button>
-    </div>
-
-    <div class="FBLoggedInPlaceHolder">
-        <h1 class="FBsuccess centered" style="color:#007bff; font-style:italic; font-family: 'Apple Chancery';"></h1>
-        <br>
-
-        <p class="FBinsertname centered" style="font-size: 20px;"></p>
-        <img class="FBPhoto img-responsive" src="" />
-        <a href='/index' class="centered"></a>
-
-    </div>
-
-    {{> facebook}}
-    <script src="/js/facebook.js"></script>
   </body>
 </html>
