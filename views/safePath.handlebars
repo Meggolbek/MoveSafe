@@ -39,9 +39,17 @@
 
 
   <div class="navBar card-block">
-    <a href="/index" id="navigationBar hover">Home</a>
-    <a href="javascript:history.back()" style="float: left; padding-left: 10%">Back</a>
-    <a href="/" style="float: right; padding-right: 10%">Logout</a>
+      <a href="/index" id="navigationBar hover" style="font-size: 200%; position: relative; top: 7%"><i class="fas fa-home"></i></a>
+      <a href="javascript:history.back()" style="font-size: 200%; float: left; padding-top:1%; padding-left: 7%"><i class="fas fa-chevron-left"></i></a>
+      <i onclick="dropDowns()" class="setting-dropdown2 fas fa-cog" style="color: white; float: right; padding-right: 10%;"></i>
+      <div id="myDropdown2" class="dropdown-content2" >
+          <div style="border-bottom: solid black">
+              <a href="/FrequentlyAskedQuestions" style="color:black">FAQ</a>
+          </div>
+          <div>
+              <a href="/" style="color:black">Logout</a>
+          </div>
+      </div>
   </div>
 
 
@@ -136,6 +144,27 @@
         document.getElementById("destination-input-path").value = "{{destination}}";
     });
 </script>
+
+  <script>
+      function dropDowns() {
+          document.getElementById("myDropdown2").classList.toggle("show");
+      }
+
+      // Close the dropdown menu if the user clicks outside of it
+      window.onclick = function(event) {
+          if (!event.target.matches('.setting-dropdown2')) {
+
+              var dropdowns = document.getElementsByClassName("dropdown-content2");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                      openDropdown.classList.remove('show');
+                  }
+              }
+          }
+      }
+  </script>
 
 </body>
 </html>
