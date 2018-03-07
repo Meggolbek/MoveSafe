@@ -50,7 +50,7 @@ var map;
 
          console.log("about to load geoJson file!");
          // map.data.loadGeoJson('https://storage.googleapis.com/mapsdevsite/json/google.json');
-         map.data.loadGeoJson('https://raw.githubusercontent.com/Meggolbek/MoveSafe/mapLayerSparrow/public/neighborhood_files/ZillowNeighborhoods-CA.json');
+         map.data.loadGeoJson('https://raw.githubusercontent.com/Meggolbek/MoveSafe/472e3e10a886dfd0d01040f8e812c4ff2cae3fa2/public/neighborhood_files/ZillowNeighborhoods-CA.json');
 
      // Color Capital letters blue, and lower case letters red.
      // Capital letters are represented in ascii by values less than 91
