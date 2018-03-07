@@ -17,14 +17,6 @@ function initializePage() {
         viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth + "px, initial-scale=1.0");
     }, 300);
     console.log("here1");
-    $("#searchButton").click(function(e){
-        console.log("here2");
-        gtag('event', 'click', {
-            'event_category': 'testBtn',
-            'event_label': 'user clicked tester',
-            'value': 1
-        });
-    });
 }
 
 function clearTextStart()  
