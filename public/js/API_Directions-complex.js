@@ -75,9 +75,7 @@ var map;
              strokeWeight: 1
          };
      });
-
-     // console.log("Can i get the lat here? " + sLatitude); => no it's undefined
- }
+     }
 
       function calculateAndDisplayRoute() {
 
@@ -94,9 +92,7 @@ var map;
                     renderer.setRouteIndex(0);
                     var ETA = response.routes[0].legs[0].duration.text;
                     var num = ETA.charCodeAt(0);
-                    console.log(num);
                     var safetyLevel = (num % 5) + 1;
-                    console.log(safetyLevel);
                     $("#safetyLevel").text("Safety Level: " + safetyLevel);
                     $("#ETA").text("ETA: " + ETA);
                 };
@@ -140,10 +136,7 @@ function renderDirectionsPolylines(response) {
 
     // Adding our customized marker
     var start = JSON.stringify(response.routes[0].legs[0].start_location, null, 4);
-    // console.log(test);
     var obj1 = eval('(' + start + ')');
-    console.log(obj1);
-    // console.log(obj.lat);
 
     sLatitude = obj1.lat;
     sLongtitude = obj1.lng;
@@ -212,4 +205,3 @@ function attachListener(num, stepPolyline, response) {
           stepDisplay.open(map, marker);
         });
       }
-google.maps.event.addDomListener(window, 'load', initMap);

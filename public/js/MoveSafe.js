@@ -16,15 +16,4 @@ function initializePage() {
         var viewport = document.querySelector("meta[name=viewport]");
         viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth + "px, initial-scale=1.0");
     }, 300);
-    console.log("here1");
 }
-
-function clearTextStart()  
-{
-    document.getElementById('origin-input').value = "";
-}  
-
-function clearTextDest()  
-{
-    document.getElementById('destination-input').value = "";
-}  
